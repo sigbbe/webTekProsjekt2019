@@ -18,17 +18,20 @@ body {
 #content {
     position: relative;
     margin: auto;
-    /* padding-top: 50px; */
-    /* padding-bottom: 150px; */
-    width: 100%;
+    width: 90%;
     height: fit-content;
-    /* padding-bottom: -10%; */
-    /* background-image: url(../media/jostein.jpg);
-    background-repeat: space; */
+    display: block;
+    outline: 1px solid red;
+    transition: top 1s ease;
+}
+#content.moveDown {
+    top: 0px;
+}
+#content.moveUp {
+    top: -250px;
 }
 
 .paragrephs{
-    top: -150px;
     position: relative;
     width: 70%;
     margin-left: auto;
@@ -40,40 +43,20 @@ body {
 }
 
 h1 {
+    color: #ffffff;
+    text-align: center;
     position: relative;
-    top: -70vh;
-    color: white;
-    width: fit-content;
-    margin: auto;
+    display: block;
     font-size: 100px;
-    /* left: 15%;
-    position: relative; */
 }
 
 #img1 {
-    top: -68.4px;
-    /* top: -200px;     */
-}
-#img2 {
-    position: relative;
-    top: -100px;
-    /* top: 578.7px; */
+    filter: hue-rotate(90deg);
 }
 
 .images {
     width: 100%;
-    z-index: -10;
     position: relative;
-}
-
-.flex_box:first-child {
-    /* position: relative;
-    margin-top: -50px; */
-    /* height: 400px; */
-    display: block;
-    filter: hue-rotate(90deg);
-    /* border: 3px solid rebeccapurple; */
-    overflow: hidden;
 }
 
 .flex_box {
@@ -82,67 +65,3 @@ h1 {
 }
 
 
-/* Soxial media icons */
-.fa {
-    /* position: relative; */
-    width: 30px;
-    height: 30px;
-    transition: width 1s ease-in;
-    transition: height 1s ease-in;
-    /* float: right; */
-    padding: 5px;
-    vertical-align: middle;
-    display: inline;
-    /* border-radius: 100%; */
-}
-
-.fa:hover {
-    /* background-color: black; */
-    opacity: 0.6;
-    height: 40px;
-    width: 40px;
-}
-
-footer p, footer a {
-    display: inline;
-}
-
-footer a {
-    margin-left: 10%;
-}
-
-
-/* Scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: white; 
-}
-
-::-webkit-scrollbar-thumb {
-    background: #888; 
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-}
-
-footer {
-    position: relative;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
-    text-align: center;
-    border-top: 1px solid #ffffff;
-    background-color: #ffffff;
-}
-
-footer p {
-    /* position: absolute; */
-    text-align: right;
-    width: 40%;
-    left: 50%;
-}
