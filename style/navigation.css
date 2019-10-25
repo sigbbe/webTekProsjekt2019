@@ -16,8 +16,6 @@
     left: 0%;
 }
 
-
-
 #burgerNav { display: none;}
 #burgerNav:hover { cursor: pointer; }
 
@@ -62,15 +60,14 @@
     position: absolute;
     text-align: center;
     left: 50%;
-    margin-left: -8%;
-    opacity: 1;
-
+    margin-left: -70px;
+    z-index: 10;
     /* width: fit-content; */
     /* background-color: rgba(55, 55, 55,0.5); */
     /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
 }
 #hover_navigation_element:hover .dropdown-content, .dropdown-content:hover a {
-    /* display: flex; */
+    display: flex;
     justify-content: center;
     flex-flow: column;
 }
@@ -131,6 +128,10 @@
         margin: 0px 5%;
         height: 100%;
         margin: auto;        
+    }
+
+    h1 {
+        font-size: 40px;
     }
 }
 
