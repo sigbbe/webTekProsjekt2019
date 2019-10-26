@@ -133,17 +133,16 @@ for (let i = 0; i < someIcons.length; i++) {
     footer.appendChild(link)
 }
 document.body.appendChild(footer)
-// document.getElementById("content").appendChild(footer)
 
 
 // Fix navigation-position-bug
-document.body.onresize = function () {
-    if (document.body.clientWidth >= 625) {
+// document.body.onresize = function () {
+//     if (document.body.clientWidth >= 625) {
     //     console.log(document.getElementById("navigation").style.top);
         // document.getElementById("content").style.top = "0px";
     //     console.log(document.getElementById("navigation").style.top);
-        console.log(document.body.clientWidth);
-    }
+    //     console.log(document.body.clientWidth);
+    // }
     // document.getElementById("navigation").style.top = "300px";
 
-};
+// };

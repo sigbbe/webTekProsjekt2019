@@ -36,8 +36,9 @@
 
 
 .navigation_element:hover {
-    border-top: 2px solid red;
-    margin-top: -2px;
+    /* border-top: 2px solid red;
+    margin-top: -2px; */
+    background-image: linear-gradient(to right,  rgba(15, 150, 150, 0.5),  rgba(150, 15, 37, 0.5),  rgba(45, 99, 69, 0.5));
 }
 .navigation_element a:hover, .active {
     color: red;
@@ -56,11 +57,9 @@
     width: 600px;
     left: 50%;
     margin-left: -300px;
-    /* z-index: 10; */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-/* #hover_navigation_element:hover .dropdown-content, .dropdown-content:hover a { */
 #hover_navigation_element:hover .dropdown-content  {
     display: flex;
 }
@@ -72,15 +71,20 @@
     text-decoration: none;
     text-align: center;
     color:#ffffff;
+    /* background-color: #ddd; */
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-image: linear-gradient(to right,  rgba(15, 150, 150, 0.5),  rgba(150, 15, 37, 0.5),  rgba(45, 99, 69, 0.5));
     color: red;
 }
 
 @media only screen and (max-width: 625px) {
-    #content { top: 0px; }
+    h1 {
+        font-size: 40px;
+    }
+
+    #content { top: -110px; }
     #burgerNav {
         display: block;
         position: absolute;
@@ -107,29 +111,48 @@
     .navigation_element {
         font-size: initial;
         display: flex;
+        /* flex-direction: row; */
         justify-content: center;
         flex-flow: column;
         padding: 0;
         height: 30px;
     }
-    #hover_navigation_element:hover .dropdown-content  {
-    /* #hover_navigation_element:hover .dropdown-content, .dropdown-content:hover .dropdown-content a { */
-        /* display: inline; */
-        position: relative;
-        text-align: center;
-        left: 5%;
-        padding: 12px 0px;
+
+    .navigation_element a {
+        padding: 0;
+        height: 30px;
+        line-height: 200%;
+    }
+
+    .dropdown-content {
+        display: none;
+    }
+
+    #hover_navigation_element {
+        height: fit-content;
     }
 
     .dropdown-content a {
-        /* display: inline; */
-        width: 300px;
-        height: 100%;
-        margin-left: 20px;
+        width: fit-content;
+        padding: 0 10%;
     }
 
-    h1 {
-        font-size: 40px;
+    .dropdown-content a:hover {
+        /* background-color: transparent; */
+        background-color: rgba(16, 14, 35, 0.1);
+    }
+
+    #hover_navigation_element:hover {
+        border-top: 2px solid red;
+        margin-top: -2px;
+    }
+
+    #hover_navigation_element:hover .dropdown-content {
+        display: inline-flex;
+        justify-content: center;
+        flex-direction: row;
+        position: relative;
+        border-bottom: 2px solid red;
     }
 }
 
