@@ -7,7 +7,7 @@ const pageArray = [
     ["index.html", "https://www.google.com/search?q=color+picker&oq=color+picker&aqs=chrome..69i57j0l5.3577j0j7&sourceid=chrome&ie=UTF-8", "media.html", "events.html", "store.html"],
 ];
 
-const aboutSubPageArray = [
+const mediaSubPageArray = [
     ["music.html", "images.html", "videos.html"], 
     ["Music", "Images", "Videos"]
 ];
@@ -52,11 +52,11 @@ for (let i = 0; i < pageArray[0].length; i++) {
             li.className += " dropbtn";
             let dropDownDiv = document.createElement("div");
                 dropDownDiv.className = "dropdown-content";
-            for (let i = 0; i < aboutSubPageArray[0].length; i++) {
-                let aboutSubPages = document.createElement("a");
-                    aboutSubPages.href = aboutSubPageArray[0][i];
-                    aboutSubPages.innerHTML = aboutSubPageArray[1][i]
-                dropDownDiv.appendChild(aboutSubPages);
+            for (let i = 0; i < mediaSubPageArray[0].length; i++) {
+                let mediaSubPages = document.createElement("a");
+                    mediaSubPages.href = mediaSubPageArray[0][i];
+                    mediaSubPages.innerHTML = mediaSubPageArray[1][i]
+                dropDownDiv.appendChild(mediaSubPages);
             }
             li.id = "hover_navigation_element";
             li.appendChild(dropDownDiv);
@@ -133,6 +133,7 @@ for (let i = 0; i < someIcons.length; i++) {
     footer.appendChild(link)
 }
 document.body.appendChild(footer)
+// document.getElementById("content").appendChild(footer)
 
 
 // Fix navigation-position-bug
