@@ -4,7 +4,7 @@ var page = path.split("/").pop();
 
 const pageArray = [
     ["Home", "About", "Media", "Events", "Store"],
-    ["index.html", "https://www.google.com/search?q=color+picker&oq=color+picker&aqs=chrome..69i57j0l5.3577j0j7&sourceid=chrome&ie=UTF-8", "media.html", "events.html", "store.html"],
+    ["index.html", "about.html", "media.html", "events.html", "store.html"],
 ];
 
 const mediaSubPageArray = [

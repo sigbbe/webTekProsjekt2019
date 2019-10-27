@@ -1,16 +1,30 @@
 // images.js
 const imageInImageGallery = document.querySelectorAll(".imgInImgGalleryElement");
-console.log(imageInImageGallery);
+// Make big image
+const canvasImgParent = document.createElement("div");
+canvasImgParent.id = "canvasImgParent";
+canvasImgParent.style.display = "none";
+document.body.appendChild(canvasImgParent);
+const canvasImg = document.createElement("img")
+canvasImg.id = "canvasImg";
+canvasImgParent.appendChild(canvasImg);
+const exit = document.createElement("img");
+exit.src = "media/iconX.png";
+exit.id = "exitCanvasImg";
+exit.addEventListener("click",() => {
+    document.getElementById("canvasImgParent").style.display = "none";
+});
+canvasImgParent.appendChild(exit);
 
 
-
-// let a = imageInImageGallery.map(image => addEventListener("click"), imgOnClick);
-for (let i = 0; i < imageInImageGallery; i++) {
-    imageInImageGallery[i].addEventListener("click", imgOnClick);
-    console.log(imageInImageGallery[i]);
+for (let i = 0; i < imageInImageGallery.length; i++) {
+    imageInImageGallery[i].addEventListener("click", canvasImgFunction);    
 }
 
 
-function imgOnClick () {
-
+function canvasImgFunction () {
+    document.getElementById("canvasImgParent").style.display = "block";
+    canvasImg.src = this.src;
+    console.log("ASS");
 }
+
