@@ -3,9 +3,7 @@ html {
     box-sizing: border-box;
     position: relative;
     overflow-x: hidden;
-    /* background-image: linear-gradient(to right top,  #E50054, #2A253B, #E50054); */
     background-image: linear-gradient(to right,  #E50054, #2A253B);
-    /* background-repeat: no-repeat; */
 }
 
 body {
@@ -30,13 +28,6 @@ body {
     transition: top 1s ease;
     background-color: rgba(50, 50, 50, 0.5);
     padding-bottom: 50px;
-}
-
-#content.moveDown {
-    top: -10px;
-}
-#content.moveUp {
-    top: -110px;
 }
 
 .paragrephs{
@@ -76,7 +67,6 @@ h1 {
     left: -10%;
     flex-wrap: wrap;
     height: fit-content;
-    /* margin: 10%; */
     padding: 0% 10% 0% 10%;
 }
 
@@ -118,12 +108,10 @@ h1 {
     left: 0%;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 #canvasImg {
-    /* display: flex;
-    align-self: center; */
     margin-left: 20%;
     margin-top: 3.5%;
     width: 60%;

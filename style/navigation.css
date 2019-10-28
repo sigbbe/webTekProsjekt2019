@@ -19,7 +19,7 @@
 #burgerNav:hover { cursor: pointer; }
 
 .navigation_element {
-    background-color: rgba(16, 14, 35, 0.7);
+    background-color: rgba(16, 14, 35, 0.4);
     font-size: 2em;
     list-style-type: none;
     display: inline-block;
@@ -79,12 +79,18 @@
     color: red;
 }
 
+#content.moveDown {
+    top: 60px;
+}
+
 @media only screen and (max-width: 625px) {
     h1 {
         font-size: 40px;
     }
-
+    #content.moveDown { top: -10px; }
+    #content.moveUp { top: -110px; }
     #content { top: -110px; }
+
     #burgerNav {
         display: block;
         position: absolute;
@@ -203,8 +209,7 @@ footer {
     top: 90px;
     padding: 0.5rem;
     text-align: center;
-    /* background-color: rgba(52, 59, 113, 0.7);     */
-    background-color: rgba(16, 14, 35, 0.7);
+    background-color: rgba(16, 14, 35, 0.4);
 }
 
 footer a {
