@@ -29,20 +29,37 @@
 
 .navigation_link {
     line-height: 65px;
+    position: relative;
     font-style: normal;
     color: #ffffff;
     text-decoration: none;
 }
 
 
-.navigation_element:hover {
-    /* border-top: 2px solid red;
-    margin-top: -2px; */
-    background-image: linear-gradient(to right,  rgba(15, 150, 150, 0.5),  rgba(150, 15, 37, 0.5),  rgba(45, 99, 69, 0.5));
+.navigation_element:hover, .active,  .dropdown-content a:hover{
+    border-bottom: 4px solid rgba(24, 24, 52, 0.5);
+    margin-bottom: -4px;
+    /* background-color: rgba(0,0,0,0.1); */
+    /* background-image: linear-gradient(to right,  rgba(15, 150, 150, 0.5),  rgba(150, 15, 37, 0.5),  rgba(45, 99, 69, 0.5)); */
 }
 .navigation_element a:hover, .active {
-    color: red;
+    color: rgba(24, 24, 52, 0.5);
 }
+
+a {
+    border-bottom: none;
+}
+
+.active a {
+    border-bottom: none;
+    margin-bottom: 0;
+    color: rgba(24, 24, 52, 0.5);
+}
+.active {
+    color: rgba(24, 24, 52, 0.5);
+}
+
+
 
 .navigation_element a {
     transition: color 0.5s ease;
@@ -51,7 +68,7 @@
 /* Dropdown */
 .dropdown-content {
     display: none;
-    background-color: rgba(211, 31, 101, 0.5);
+    background-color: rgba(211, 31, 101, 0.2);
     position: absolute;
     text-align: center;
     width: 600px;
@@ -75,8 +92,9 @@
 }
 
 .dropdown-content a:hover {
-    background-image: linear-gradient(to right,  rgba(15, 150, 150, 0.5),  rgba(150, 15, 37, 0.5),  rgba(45, 99, 69, 0.5));
-    color: red;
+    /* background-image: linear-gradient(to right,  rgba(15, 150, 150, 0.5),  rgba(150, 15, 37, 0.5),  rgba(45, 99, 69, 0.5)); */
+    background: transparent;
+    color: rgba(24, 24, 52, 0.5);
 }
 
 #content.moveDown {
@@ -149,8 +167,8 @@
     }
 
     #hover_navigation_element:hover {
-        border-top: 2px solid red;
-        margin-top: -2px;
+        border-top: 1px solid red;
+        margin-top: -1px;
     }
 
     #hover_navigation_element:hover .dropdown-content {

@@ -94,6 +94,7 @@ document.body.insertBefore(burgerNav, document.body.childNodes[1]);
 
 // Apply active class to the navigation element of current page
 const all_list_items = document.querySelectorAll("li");
+const dropdown = document.querySelector(".dropdown-content");
 const all_links = document.querySelectorAll("a");
 switch (page) {
     case "index.html":
@@ -106,8 +107,21 @@ switch (page) {
         break
     case "media.html":
         all_list_items[2].className += " active";
-        all_links[2].className += " active";  
-        break    
+        all_links[2].className += " active";
+        break
+    case "music.html":
+        dropdown.childNodes[0].className += " active";
+        dropdown.style.display = "flex";
+        break
+    case "images.html":
+        dropdown.childNodes[1].className += " active";
+        dropdown.childNodes[1].style.color = "rgba(24, 24, 52, 0.5)";
+        dropdown.style.display = "flex";
+        break
+    case "videos.html":
+        dropdown[2].className += " active";
+        dropdown.style.display = "flex";
+        break
     case "events.html":
         all_list_items[3].className += " active";
         all_links[3].className += " active";
