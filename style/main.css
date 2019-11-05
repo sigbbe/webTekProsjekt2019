@@ -2,7 +2,7 @@ html {
     height: 100%;
     box-sizing: border-box;
     position: relative;
-    background-image: linear-gradient(to right, rgba(1, 2, 3, 0.5), rgba(137, 13, 63, 0.5));
+    /* background-image: linear-gradient(to right, rgba(1, 2, 3, 0.5), rgba(137, 13, 63, 0.5)); */
 }
 
 body {
@@ -12,26 +12,28 @@ body {
     padding-bottom: 4rem;
     min-height: 100%;
     height: 100%;
+    width: 100%;
     min-width: 340px;
     overflow-x: hidden;
+    background-attachment: fixed;
+    background-image: url("../media/jostein.jpg");
 }
 
 #content {
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    top: 60px;
+    margin: 100px auto auto auto;
+    padding: 0px 0px 100px 0px;
+    width: 80%;
     height: fit-content;
     min-height: 100%;
     display: block;
     transition: top 1s ease;
+    overflow: hidden;
     background-color: rgba(50, 50, 50, 0.5);
     /* background-image: linear-gradient(blue, green, yellow, green); */
-    padding-bottom: 50px;
 }
 
-.paragrephs{
+.paragrephs {
     position: relative;
     width: 95%;
     margin-left: auto;
@@ -50,104 +52,104 @@ h1 {
     top: 15px;
 }
 
-#img1 {
-    /* filter: hue-rotate(90deg); */
-}
-
 .images {
     width: 100%;
     position: relative;
 }
 
-/* Style for images.html */
-#imgGallery {
-    width: 80%;
-    display: flex;
-    /* justify-content: center; */
-    /* display: flex; */
-    flex-flow: column wrap;
+/* Style for music.html */
+#musicGallery {
+    /* position: relative;
+    width: 80%;   
     height: 100%;
-    left: -10%;
-    flex-flow: column wrap;
     height: fit-content;
     padding: 0% 10% 0% 10%;
-    /* display: grid; */
-}
+    margin: 2% 0%; */
 
-.imgGalleryElement {
-    background-color: rgba(0, 0, 0, 0.5);
-    margin: 2%;
-    padding: .5% .5% 5% .5%;;
-    width: 300px;
-    color: white;
-    height: 20%;
-}
-
-.imgGalleryElement:hover {
-    box-shadow: 0px 0px 10px #000000;
-}
-
-.imgGalleryElement p {
-    word-wrap: break-word;
-    width: 100%;
-}
-
-.imgGalleryElement img {
     position: relative;
-    width: 100%;
+    width: 90%;
+    height: fit-content;
+    background-color: rgba(250, 250, 250, 0.5);
+    outline: 2px solid rgba(0, 0, 0, 0.5);
     margin: auto;
-}
-
-.imgGalleryElement img:hover {
-    cursor: pointer;
-}
-
-
-#canvasImgParent {
-    position: fixed;
-    /* display: flex;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    align-content: center;
-    justify-content: center;
-     */
-    top: 0%;
-    left: 0%;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
 }
 
-#canvasImg {
-    /* width: 60%; */
-    height: 70%;
+.coverImage {
+    width: 30%;
+    min-width: 124px;
+    min-height: 83px;
+}
+
+.songInMusicGallery:focus {
+    outline: none;
+}
+
+.songInMusicGallery {
+    width: 69.5%;
+    background-color: #F3F3F5;
+    /* padding: 5% 0% 5% 0%; */
+}
+
+#songsTable {
     position: relative;
-    margin-left: 2%;
-    margin-top: 8%;
-    display: block;
+    margin: auto;
+    width: 90%;
+    top: 50px;
+    background-color: white;
+    line-height: 4em;
+    overflow: hidden;
+}
+tr  {
+    /* background-color: white !important; */
 }
 
-#exitCanvasImg {
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    left: 20px;
-    top: 15px;
-}
-
-#exitCanvasImg:hover, .navigationArrow:hover {
-    opacity: 0.5;
+tr:nth-child(n+1):hover {
     cursor: pointer;
+    background-color: gray;
+    border: 3px solid gray;
 }
 
-.navigationArrow {
-    width: 30px;
-    height: 30px;
+td:hover::after,
+th:hover::after {
+  content: "";
+  position: absolute;
+  background-color: #ffa;
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
 }
 
-#navigationArrowNext{
-    
+/* images.html */
+#mainImage {
+    position: relative;
+    margin: auto;
+    width: 100%;
 }
-#navigationArrowLast{
-    margin-left: 11%;
-    transform: rotate(180deg);
+
+td,
+th {
+    text-align: center;
+}
+
+#imageNavDiv {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.imageNav {
+    width: 15%;
+    margin: 10px;
+}
+
+.imageNav:hover {
+    cursor: pointer;
 }

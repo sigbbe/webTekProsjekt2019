@@ -75,15 +75,15 @@ let burgerNav = document.createElement("img");
         const content = document.getElementById("content");
         if (onOff) {
             onOff = false;
-            ul.classList.add("moveLeft")
-            ul.classList.remove("moveRight")
+            ul.classList.remove("navMoveUp")
+            ul.classList.add("navMoveDown")
             burgerNav.classList.remove("burgerNavTurn")
-            content.classList.add("moveUp");
             content.classList.remove("moveDown");
+            content.classList.add("moveUp");
         } else {
             onOff = true;
-            ul.classList.add("moveRight")
-            ul.classList.remove("moveLeft")
+            ul.classList.add("navMoveUp")
+            ul.classList.remove("navMoveDown")
             burgerNav.classList.add("burgerNavTurn")
             content.classList.add("moveDown");
             content.classList.remove("moveUp");
@@ -96,40 +96,62 @@ document.body.insertBefore(burgerNav, document.body.childNodes[1]);
 const all_list_items = document.querySelectorAll("li");
 const dropdown = document.querySelector(".dropdown-content");
 const all_links = document.querySelectorAll("a");
+
+const activeListItem = "activeListItem";
+const activeLink = "activeLink";
+
 switch (page) {
     case "index.html":
-        all_list_items[0].className += " active";
-        all_links[0].className += " active";
+        all_list_items[0].className += " "+activeListItem;
+        all_links[0].className += " "+activeLink;
         break
     case "about.html":
-        all_list_items[1].className += " active";
-        all_links[1].className += " active";
+        all_list_items[1].className += " "+activeListItem;
+        all_links[1].className += " "+activeLink;
         break
     case "media.html":
-        all_list_items[2].className += " active";
-        all_links[2].className += " active";
+        all_list_items[2].className += " "+activeListItem;
+        all_links[2].className += " "+activeLink;
         break
     case "music.html":
-        dropdown.childNodes[0].className += " active";
-        dropdown.style.display = "flex";
+        dropdown.childNodes[0].className += activeLink;
+        dropdownActive();
+        window.addEventListener("resize", dropdownActive);
         break
     case "images.html":
-        dropdown.childNodes[1].className += " active";
-        dropdown.childNodes[1].style.color = "rgba(24, 24, 52, 0.5)";
-        dropdown.style.display = "flex";
+        dropdown.childNodes[1].className += activeLink;
+        dropdownActive();
+        window.addEventListener("resize", dropdownActive);
         break
     case "videos.html":
-        dropdown[2].className += " active";
-        dropdown.style.display = "flex";
+        dropdown.childNodes[2].className += activeLink;
+        dropdownActive();
+        window.addEventListener("resize", dropdownActive);
         break
     case "events.html":
-        all_list_items[3].className += " active";
-        all_links[3].className += " active";
+        all_list_items[3].className += " "+activeListItem;
+        all_links[3].className += " "+activeLink;
         break        
     case "store.html":
-        all_list_items[4].className += " active";
-        all_links[4].className += " active";
+        all_list_items[4].className += " "+activeListItem;
+        all_links[4].className += " "+activeLink;
         break
+}
+
+window.addEventListener("resize", () => {
+    if (document.body.clientWidth > 625) {
+        console.log("625+++");
+        document.getElementById("content").className = "";
+    }
+})
+
+function dropdownActive () {
+    if (document.body.clientWidth > 625) {
+        dropdown.style.display = "flex"; 
+    } else {
+        dropdown.style.display = "none";
+        document.body.style.overflowY = "auto";
+    }
 }
 
 
@@ -158,5 +180,4 @@ document.body.appendChild(footer)
     //     console.log(document.body.clientWidth);
     // }
     // document.getElementById("navigation").style.top = "300px";
-
 // };
