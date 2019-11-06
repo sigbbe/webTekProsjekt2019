@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,50 +10,56 @@
     <link rel="stylesheet" href="style/navigation.css">
     <title>Jostein Hodne</title>
 </head>
+
 <body>
     <div id="content">
         <h1 id="josteinHodne">Jostein Hodne</h1>
         <!-- Content -->
         <div id="musicGallery">
-            <img class="coverImage" src="./media/jostein.jpg" alt="song cover">
-                <audio class="songInMusicGallery" src="./media/musicTest.mp3" controls></audio>
+            <img id="coverImage" src="./media/placeHolderCover.jpg" alt="song cover">
+            <audio id="songInMusicGallery" src="" controls></audio>
         </div>
-        <table id="songsTable">
-            <!-- <tr> -->
-                <th>Title</th>
-                <th>Album</th>
-                <th>Time</th>
-                <th>Img</th>
-            <!-- </tr> -->
-            <tr>
-                <td>D</td>
-                <td>E</td>
-                <td>F</td>
-                <td>G</td>
-            </tr>
-            <tr>
-                <td>D</td>
-                <td>E</td>
-                <td>F</td>
-                <td>G</td>
-            </tr>
-            <tr>
-                <td>D</td>
-                <td>E</td>
-                <td>F</td>
-                <td>G</td>
-            </tr>
-            <tr>
-                <td>D</td>
-                <td>E</td>
-                <td>F</td>
-                <td>G</td>
-            </tr>
-
-        </table>
+        <ul id="songsList">
+            <li id="songsListHeaders">
+                <p></p>
+                <p>Sang</p>
+                <p>Album</p>
+                <p>Content</p>
+                <p>Cover</p>
+            </li>
+            <li class="songsListElement">
+                <div><img class="playSlashPause" src="./media/playMusic.png" alt="" height="30"></div>
+                <p class="songs">Smeke reven</p>
+                <p>SkrtSkrt</p>
+                <div>
+                    <p class="explicit">Explicit</p>
+                </div>
+                <div><img src="./media/jostein.jpg" alt="song-cover" height="30"></div>
+            </li>
+            <li class="songsListElement">
+                <div><img class="playSlashPause" src="./media/playMusic.png" alt="" height="30"></div>
+                <p class="songs">Smeke reven</p>
+                <p>SkrtSkrt</p>
+                <div>
+                    <p class="explicit" style="opacity: 0;">Explicit</p>
+                </div>
+                <div><img src="./media/nutFace.jpg" alt="song-cover" height="30"></div>
+            </li>
+            <li class="songsListElement">
+                <div><img class="playSlashPause" src="./media/playMusic.png" alt="" height="30"></div>
+                <p class="songs">Smeke reven</p>
+                <p>SkrtSkrt</p>
+                <div>
+                    <p class="explicit">Explicit</p>
+                </div>
+                <div><img src="./media/dank2.jpg" alt="song-cover" height="30"></div>
+            </li>
+        </ul>
         <!-- /Content -->
     </div>
     <script src="script/main.js"></script>
+    <script src="script/music.js"></script>
     <script type="text/javascript" src="script/navigation.js"></script>
 </body>
+
 </html>

@@ -12,16 +12,22 @@
     left: 0%;
     top: -25%;
 }
+
 #navigation.navMoveUp {
     left: 0%;
     top: 0%;
 }
 
-#burgerNav { display: none;}
-#burgerNav:hover { cursor: pointer; }
+#burgerNav {
+    display: none;
+}
+
+#burgerNav:hover {
+    cursor: pointer;
+}
 
 .navigation_element {
-    background-color: rgba(16, 14, 35, 0.4);
+    background-color: rgba(16, 14, 35, 0.9);
     font-size: 2em;
     list-style-type: none;
     display: inline-block;
@@ -38,16 +44,18 @@
 }
 
 a.activeLink {
-    color: rgba(24, 24, 52, 0.5) !important;
+    /* color: rgba(24, 24, 52, 0.7) !important; */
 }
 
-.dropdown-content .activeLink, li.navigation_element.activeListItem {
-    border-bottom: 4px solid rgba(24, 24, 52, 0.5);
+.dropdown-content .activeLink,
+li.navigation_element.activeListItem {
+    /* border-bottom: 4px solid rgba(24, 24, 52, 0.9); */
+    border-bottom: 4px solid #ffffff;
     margin-bottom: -4px;
-    background-color: white;
+    background-color: rgba(16, 16, 16, 0.8);
 }
 
- /* {
+/* {
     border-bottom: 4px solid rgba(24, 24, 52, 0.5);
     margin-bottom: -4px;
     background-color: white;
@@ -57,17 +65,17 @@ a.activeLink {
 /* Dropdown */
 .dropdown-content {
     display: none;
-    background-color: rgba(211, 31, 101, 0.2);
+    background-color: rgba(211, 31, 101, 0.9);
     position: absolute;
     width: fit-content;
     left: 50%;
     /* top: 157px; */
-    top: 96px;
+    top: 95px;
     transform: translate(-50%, -50%);
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-#hover_navigation_element:hover .dropdown-content  {
+#hover_navigation_element:hover .dropdown-content {
     display: flex;
     justify-content: center;
     /* flex-direction: column;
@@ -79,7 +87,7 @@ a.activeLink {
     padding: 13px 32px;
     text-decoration: none;
     text-align: center;
-    color:#ffffff;
+    color: #ffffff;
 }
 
 #navigation a {
@@ -90,7 +98,8 @@ a.activeLink {
     color: rgba(24, 24, 52, 0.5);
 }
 
-#navigation li:hover, .dropdown-content a:hover{
+#navigation li:hover,
+.dropdown-content a:hover {
     border-bottom: 4px solid rgba(24, 24, 52, 0.5);
     margin-bottom: -4px;
 }
@@ -107,9 +116,18 @@ a.activeLink {
     h1 {
         font-size: 40px;
     }
-    #content.moveDown { top: -80px; }
-    #content.moveUp { top: -180px; }
-    #content { top: -180px; }
+
+    #content.moveDown {
+        top: -80px;
+    }
+
+    #content.moveUp {
+        top: -180px;
+    }
+
+    #content {
+        top: -180px;
+    }
 
     #burgerNav {
         display: block;
@@ -189,7 +207,9 @@ a.activeLink {
         position: relative;
     }
 
-    .navigation_element:hover, .active,  .dropdown-content a:hover{
+    .navigation_element:hover,
+    .active,
+    .dropdown-content a:hover {
         border-bottom: 1px solid rgba(211, 31, 101, 0.2);
         margin-bottom: -1px;
     }
@@ -200,6 +220,11 @@ a.activeLink {
 
     .flexDiv p {
         display: none;
+    }
+
+    #coverImage {
+        width: 50px;
+        height: auto;
     }
 }
 
@@ -227,15 +252,15 @@ a.activeLink {
 }
 
 ::-webkit-scrollbar-track {
-    background: white; 
+    background: white;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: #888;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #555;
 }
 
 footer {
@@ -246,7 +271,7 @@ footer {
     top: 90px;
     padding: 0.5rem;
     text-align: center;
-    background-color: rgba(16, 14, 35, 0.4);
+    background-color: rgba(16, 14, 35, 0.9);
 }
 
 footer a {
@@ -260,7 +285,8 @@ footer p {
     left: 50%;
 }
 
-footer p, footer a {
+footer p,
+footer a {
     display: inline;
 }
 
