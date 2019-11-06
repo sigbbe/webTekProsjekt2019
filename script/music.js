@@ -69,7 +69,7 @@ function playThisSong() {
         songDataBase[index].paused = false;
     } else {
         console.log("alerkglksag");
-        
+
         this.src = "./media/playMusic.png";
         audioPlayer.src = songDataBase[index].audioFile;
         audioPlayer.currentTime = time;

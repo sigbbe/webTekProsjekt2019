@@ -3,14 +3,11 @@ html {
     box-sizing: border-box;
     position: relative;
     /* background-image: linear-gradient(to right, rgba(1, 2, 3, 0.5), rgba(137, 13, 63, 0.5)); */
-<<<<<<< HEAD
     background: url("../media/jostein.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-=======
->>>>>>> origin/about
 }
 
 body {
@@ -24,11 +21,7 @@ body {
     min-width: 340px;
     overflow-x: hidden;
     background-attachment: fixed;
-<<<<<<< HEAD
     /* background-image: url("../media/jostein.jpg"); */
-=======
-    background-image: url("../media/jostein.jpg");
->>>>>>> origin/about
 }
 
 #content {
@@ -41,14 +34,9 @@ body {
     display: block;
     transition: top 1s ease;
     overflow: hidden;
-<<<<<<< HEAD
     /* background-color: rgba(50, 50, 50, 0.9); */
     background-color: rgba(16, 14, 35, 0.9);
     /* background-image: linear-gradient(blue, green, yellow, green); */
-=======
-    background-color: rgba(0, 0, 0, 0.8);
-    /*background-image: linear-gradient(blue, green, yellow, green);*/
->>>>>>> origin/about
 }
 
 .paragrephs {
@@ -219,6 +207,7 @@ h1 {
 .imageNav:hover {
     cursor: pointer;
 }
+
 .songInMusicGallery:focus {
     outline: none;
 }
@@ -238,7 +227,8 @@ h1 {
     line-height: 4em;
     overflow: hidden;
 }
-tr  {
+
+tr {
     /* background-color: white !important; */
 }
 
@@ -250,14 +240,14 @@ tr:nth-child(n+1):hover {
 
 td:hover::after,
 th:hover::after {
-  content: "";
-  position: absolute;
-  background-color: #ffa;
-  left: 0;
-  top: -5000px;
-  height: 10000px;
-  width: 100%;
-  z-index: -1;
+    content: "";
+    position: absolute;
+    background-color: #ffa;
+    left: 0;
+    top: -5000px;
+    height: 10000px;
+    width: 100%;
+    z-index: -1;
 }
 
 /* images.html */
@@ -290,7 +280,7 @@ th {
 }
 
 /*About page*/
-.bio-container{
+.bio-container {
     width: 100%;
     display: flex;
     align-items: center;
@@ -298,12 +288,12 @@ th {
     flex-wrap: flex;
 }
 
-.bio-wrapper{
+.bio-wrapper {
     position: relative;
     padding: 0px 100px 50px 100px;
 }
 
-.bio{
+.bio {
     display: block;
     font-size: 16px;
     color: white;
@@ -314,19 +304,20 @@ th {
 }
 
 
-input{
+input {
     outline: none;
     border: none;
     background: transparent;
 }
 
-textarea{
+textarea {
     outline: none;
     border: none;
     background: transparent;
     resize: none;
 }
-.contact-content-container{
+
+.contact-content-container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -334,26 +325,27 @@ textarea{
     align-items: center;
 }
 
-.contact-content-wrapper{
+.contact-content-wrapper {
     position: relative;
     border-radius: 10px;
     width: 215px;
     height: 60px;
     overflow: hidden;
-    transition:all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     background: transparent;
     box-shadow: 0px 0px 100px 10px black;
 }
-.contact-button-container{
+
+.contact-button-container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-.contact-button{
+.contact-button {
     display: block;
     font-weight: bold;
     font-size: 30px;
@@ -365,11 +357,11 @@ textarea{
     border: none;
 }
 
-.contact-button:hover{
+.contact-button:hover {
     cursor: pointer;
 }
 
-.contact-container{
+.contact-container {
     width: 100%;
     min-height: 100%;
     display: none;
@@ -379,7 +371,7 @@ textarea{
     background: rgb(216, 13, 165);
 }
 
-.contact-wrapper{
+.contact-wrapper {
     width: 500px;
     background: #eeeeee;
     border-radius: 10px;
@@ -388,17 +380,17 @@ textarea{
     position: relative;
 }
 
-.contact-form{
+.contact-form {
     width: 100%;
 }
 
-.exit-button-container{
+.exit-button-container {
     width: 100%;
     display: flex;
     justify-content: flex-end;
 }
 
-.exit-button{
+.exit-button {
     display: block;
     width: 40px;
     height: 40px;
@@ -416,7 +408,7 @@ textarea{
     transition: all 0.2s;
 }
 
-.exit-button:focus{
+.exit-button:focus {
     outline: none;
     color: rgb(255, 77, 77);
     font-size: 0px;
@@ -427,7 +419,7 @@ textarea{
     transition: all 0.4s;
 }
 
-.exit-button:hover{
+.exit-button:hover {
     font-size: 30px;
     cursor: pointer;
 
@@ -437,7 +429,7 @@ textarea{
     transition: all 0.2s;
 }
 
-.contact-title{
+.contact-title {
     display: block;
     font-weight: bold;
     font-size: 40px;
@@ -447,21 +439,21 @@ textarea{
     padding-bottom: 50px;
 }
 
-.contact-input-wrap{
+.contact-input-wrap {
     width: 100%;
     position: relative;
     border-bottom: 3px solid #969696;
     margin-bottom: 50px;
 }
 
-.contact-input{
+.contact-input {
     display: block;
     width: 100%;
     font-size: 15px;
     color: #414040;
 }
 
-.contact-input-focus{
+.contact-input-focus {
     position: absolute;
     display: block;
     width: 100%;
@@ -471,7 +463,7 @@ textarea{
     pointer-events: none;
 }
 
-.contact-input-focus::before{
+.contact-input-focus::before {
     content: "";
     display: block;
     position: absolute;
@@ -486,7 +478,7 @@ textarea{
     background: rgb(216, 13, 165);
 }
 
-.contact-input-focus::after{
+.contact-input-focus::after {
     content: attr(data-placeholder);
     display: block;
     width: 100%;
@@ -499,82 +491,86 @@ textarea{
     transition: all 0.5s;
 }
 
-input.contact-input{
+input.contact-input {
     height: 40px;
 }
-input.contact-input + .contact-input-focus::after {
+
+input.contact-input+.contact-input-focus::after {
     top: 15px;
     left: 0;
 }
+
 textarea.contact-input {
     min-height: 100px;
     padding-top: 15px;
     padding-bottom: 15px;
 }
-textarea.contact-input + .contact-input-focus::after {
+
+textarea.contact-input+.contact-input-focus::after {
     top: 15px;
     left: 0;
 }
-.contact-input:focus + .contact-input-focus::after {
+
+.contact-input:focus+.contact-input-focus::after {
     top: -15px;
-  }
-  
-  .contact-input:focus + .contact-input-focus::before {
+}
+
+.contact-input:focus+.contact-input-focus::before {
     width: 100%;
-  }
+}
 
-  .contact-submit-container{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding-top: 30px;
-  }
+.contact-submit-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 30px;
+}
 
-  .contact-submit-wrap{
-      display: block;
-      position: relative;
-      border-radius: 5px;
-      width: auto;
-      overflow: hidden;
-      margin: 0 auto;
-      z-index: 1;
-  }
+.contact-submit-wrap {
+    display: block;
+    position: relative;
+    border-radius: 5px;
+    width: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    z-index: 1;
+}
 
-  .contact-submit-background{
-      position: absolute;
-      width: 200%;
-      height: 100%;
-      left: -100%;
-      z-index: -1;
-      background: purple;
-      background: linear-gradient(150deg, rgb(83, 6, 170), rgb(255, 0, 149), rgb(83, 6, 170));
+.contact-submit-background {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    left: -100%;
+    z-index: -1;
+    background: purple;
+    background: linear-gradient(150deg, rgb(83, 6, 170), rgb(255, 0, 149), rgb(83, 6, 170));
 
-      -webkit-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -moz-transition: all 0.5s;
-      transition: all 0.5;
-  }
+    transition: all 0.5;
+}
 
-  .contact-submit{
-      outline: none !important;
-      border: none;
-      background: transparent;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0 20px;
-      min-width: 250px;
-      height: 50px;
+.contact-submit {
+    outline: none !important;
+    border: none;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 250px;
+    height: 50px;
 
-      font-size: 20px;
-      font-weight: bold;
-      color: #eeeeee;
-  }
+    font-size: 20px;
+    font-weight: bold;
+    color: #eeeeee;
+}
 
-  .contact-submit:hover{
-      cursor: pointer;
-  }
+.contact-submit:hover {
+    cursor: pointer;
+}
 
-  .contact-submit-wrap:hover .contact-submit-background{
-      left: 0;
-  }
+.contact-submit-wrap:hover .contact-submit-background {
+    left: 0;
+}
