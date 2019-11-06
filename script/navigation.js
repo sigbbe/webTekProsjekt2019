@@ -8,6 +8,7 @@ const pageArray = [
 ];
 
 const mediaSubPageArray = [
+<<<<<<< HEAD
     ["music.html", "images.html", "videos.html"],
     ["Music", "Images", "Videos"]
 ];
@@ -17,18 +18,38 @@ const someIcons = [{
         imageUrl: "media/spotify.svg",
         href: "https://open.spotify.com/artist/2bdiRuYITTUvQ8pzuOKpld"
     },
+=======
+    ["music.html", "images.html", "videos.html"], 
+    ["Music", "Images", "Videos"]
+];
+
+const someIcons = [
+    {
+        name: "spotify", 
+        imageUrl: "media/spotify.svg",
+        href: "https://open.spotify.com/artist/2bdiRuYITTUvQ8pzuOKpld"
+    }, 
+>>>>>>> origin/about
     {
         name: "youtube",
         imageUrl: "media/youtube.svg",
         href: "https://www.youtube.com/channel/UCcamKl2REwZXEadT8vcKApg"
     },
     {
+<<<<<<< HEAD
         name: "facebook",
+=======
+        name: "facebook", 
+>>>>>>> origin/about
         imageUrl: "media/facebook.svg",
         href: "https://www.facebook.com/josteinfhodne"
     },
     {
+<<<<<<< HEAD
         name: "instagram",
+=======
+        name: "instagram", 
+>>>>>>> origin/about
         imageUrl: "media/instagram.svg",
         href: "https://www.instagram.com/josteinhodne/"
     },
@@ -37,6 +58,7 @@ const someIcons = [{
 
 // Make top-navbar
 let ul = document.createElement("ul");
+<<<<<<< HEAD
 ul.id = "navigation";
 for (let i = 0; i < pageArray[0].length; i++) {
     let a = document.createElement("a");
@@ -60,6 +82,31 @@ for (let i = 0; i < pageArray[0].length; i++) {
         li.id = "hover_navigation_element";
         li.appendChild(dropDownDiv);
     }
+=======
+    ul.id = "navigation";
+for (let i = 0; i < pageArray[0].length; i++) {
+    let a = document.createElement("a");
+        a.href = pageArray[1][i];
+        a.innerHTML = pageArray[0][i];
+        a.className = "navigation_link";
+    let li = document.createElement("li");
+        li.className = "navigation_element";
+        li.appendChild(a)
+        ul.appendChild(li)
+        if (i == 2) {
+            li.className += " dropbtn";
+            let dropDownDiv = document.createElement("div");
+                dropDownDiv.className = "dropdown-content";
+            for (let i = 0; i < mediaSubPageArray[0].length; i++) {
+                let mediaSubPages = document.createElement("a");
+                    mediaSubPages.href = mediaSubPageArray[0][i];
+                    mediaSubPages.innerHTML = mediaSubPageArray[1][i]
+                dropDownDiv.appendChild(mediaSubPages);
+            }
+            li.id = "hover_navigation_element";
+            li.appendChild(dropDownDiv);
+        }        
+>>>>>>> origin/about
 }
 document.body.insertBefore(ul, document.body.childNodes[0])
 // document.body.appendChild(ul);
@@ -67,6 +114,7 @@ document.body.insertBefore(ul, document.body.childNodes[0])
 
 // Make classes needed for animation of burger-navigation
 let burgerNav = document.createElement("img");
+<<<<<<< HEAD
 burgerNav.src = "./media/iconX.png";
 burgerNav.id = "burgerNav";
 let onOff = false;
@@ -88,6 +136,29 @@ burgerNav.addEventListener("click", () => {
         content.classList.remove("moveUp");
     }
 });
+=======
+    burgerNav.src = "./media/iconX.png";
+    burgerNav.id = "burgerNav";
+    let onOff = false;
+    burgerNav.addEventListener("click", () => {
+        const content = document.getElementById("content");
+        if (onOff) {
+            onOff = false;
+            ul.classList.remove("navMoveUp")
+            ul.classList.add("navMoveDown")
+            burgerNav.classList.remove("burgerNavTurn")
+            content.classList.remove("moveDown");
+            content.classList.add("moveUp");
+        } else {
+            onOff = true;
+            ul.classList.add("navMoveUp")
+            ul.classList.remove("navMoveDown")
+            burgerNav.classList.add("burgerNavTurn")
+            content.classList.add("moveDown");
+            content.classList.remove("moveUp");
+        }
+    });
+>>>>>>> origin/about
 document.body.insertBefore(burgerNav, document.body.childNodes[1]);
 
 

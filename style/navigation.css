@@ -28,6 +28,13 @@
 
 .navigation_element {
     background-color: rgba(16, 14, 35, 0.9);
+}
+
+#burgerNav { display: none;}
+#burgerNav:hover { cursor: pointer; }
+
+.navigation_element {
+    background-color: rgba(16, 14, 35, 0.4);
     font-size: 2em;
     list-style-type: none;
     display: inline-block;
@@ -98,8 +105,7 @@ li.navigation_element.activeListItem {
     color: rgba(24, 24, 52, 0.5);
 }
 
-#navigation li:hover,
-.dropdown-content a:hover {
+#navigation li:hover, .dropdown-content a:hover{
     border-bottom: 4px solid rgba(24, 24, 52, 0.5);
     margin-bottom: -4px;
 }
@@ -116,18 +122,9 @@ li.navigation_element.activeListItem {
     h1 {
         font-size: 40px;
     }
-
-    #content.moveDown {
-        top: -80px;
-    }
-
-    #content.moveUp {
-        top: -180px;
-    }
-
-    #content {
-        top: -180px;
-    }
+    #content.moveDown { top: -80px; }
+    #content.moveUp { top: -180px; }
+    #content { top: -180px; }
 
     #burgerNav {
         display: block;
@@ -207,9 +204,13 @@ li.navigation_element.activeListItem {
         position: relative;
     }
 
+<<<<<<< HEAD
     .navigation_element:hover,
     .active,
     .dropdown-content a:hover {
+=======
+    .navigation_element:hover, .active,  .dropdown-content a:hover{
+>>>>>>> origin/about
         border-bottom: 1px solid rgba(211, 31, 101, 0.2);
         margin-bottom: -1px;
     }
@@ -221,11 +222,14 @@ li.navigation_element.activeListItem {
     .flexDiv p {
         display: none;
     }
+<<<<<<< HEAD
 
     #coverImage {
         width: 50px;
         height: auto;
     }
+=======
+>>>>>>> origin/about
 }
 
 
