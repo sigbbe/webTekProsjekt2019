@@ -10,28 +10,61 @@ for (i = 0; i < playButton.length; i++) {
     songs[i].addEventListener("click", playThisSong);
 }
 
-const songDataBase = [{
-        song: "Smeke reven",
-        album: "SkrtSkrt",
+const songDataBase = [
+    {
+        song: "amber-feat-jostein-hodne",
+        album: "Small steps",
         explicit: true,
-        coverImage: "./media/jostein.jpg",
-        audioFile: "./media/song1.mp3",
+        coverImage: "./media/amber.jpg",
+        audioFile: "./media/amber-feat-jostein-hodne.mp3",
         paused: true
     },
     {
-        song: "Smeke reven",
+        song: "a' Fatij",
         album: "SkrtSkrt",
         explicit: true,
-        coverImage: "./media/nutFace.jpg",
-        audioFile: "./media/song2.mp3",
+        coverImage: "./media/smallSteps.jpg",
+        audioFile: "./media/a-fatij.mp3",
         paused: true
     },
     {
-        song: "Smeke reven",
+        song: "E du nord",
         album: "SkrtSkrt",
         explicit: true,
-        coverImage: "./media/dank2.jpg",
-        audioFile: "./media/song3.mp3",
+        coverImage: "./media/smallSteps.jpg",
+        audioFile: "./media/e-du-nord.mp3",
+        paused: true
+    },
+    {
+        song: "Feel",
+        album: "SkrtSkrt",
+        explicit: true,
+        coverImage: "./media/smallSteps.jpg",
+        audioFile: "./media/feel.mp3",
+        paused: true
+    },
+    {
+        song: "Hold me tight",
+        album: "SkrtSkrt",
+        explicit: true,
+        coverImage: "./media/smallSteps.jpg",
+        audioFile: "./media/hold-me-tight.mp3",
+        paused: true
+    },
+    {
+        song: "Si beag si mo'r.mp3",
+        album: "SkrtSkrt",
+        explicit: true,
+        coverImage: "./media/smallSteps.jpg",
+        audioFile: "./media/si-beag-si-mo-r.mp3",
+        paused: true
+    },
+    {
+        song: "The most beautiful thing",
+        album: "SkrtSkrt",
+        explicit: true,
+        coverImage: "./media/smallSteps.jpg",
+        audioFile: "./media/the-most-beautiful-thing.mp3",
         paused: true
     }
 ];
