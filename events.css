@@ -1,0 +1,118 @@
+#events {
+    padding: 0% 10%;
+}
+
+.eventText {
+    float: right;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+.eventElement {
+    min-height: 200px;
+    width: 100%;
+    margin: 0px 0px 50px 0px;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.eventElement > img {
+    height: 200px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 25px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #38414e;
+  width: 600px;
+  margin: auto;
+  color: white;
+  height: 80%;
+}
+
+.modal-content img {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+.modal-content p {
+    margin: 25;
+}
+.close {
+    position: absolute;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.eventDisc {
+    height: 50%;
+}
+
+.eventDisc h2 {
+    padding: 30px 20px 0px 20px;
+    margin: 0;
+}
+
+.eventDisc p {
+    margin: 0;
+    padding: 20px;
+}
+
+.timeAndPlace {
+    background-color: #d59563;
+    width: 100%;
+    height: 30%;
+    display: flex;
+}
+
+.timeAndPlace div p {
+    color: white;
+    width: 200px;
+    text-align: center;
+    padding-top: calc(50% - 30px);
+    padding-bottom: calc(50% - 30px);
+    margin: 0;
+}
+
+#map1, #map2, #map3, #map4 {
+    height: 100%;
+    width: 100%;
+    
+}
+
+.imgContainer {
+    height: 20%;
+    flex: 1;
+}
+
+
+.imgContainer img {
+    height: 100%;
+}
+
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
