@@ -1,0 +1,367 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    /* background-image: linear-gradient(to right, rgba(1, 2, 3, 0.5), rgba(137, 13, 63, 0.5)); */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    margin: 0;
+    padding-bottom: 4rem;
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    min-width: 340px;
+    overflow-x: hidden;
+    background-attachment: fixed;
+    background-image: url("../media/jostein.jpg");
+}
+
+#content {
+    position: relative;
+    margin: 100px auto auto auto;
+    padding: 0px 0px 100px 0px;
+    width: 80%;
+    height: fit-content;
+    min-height: 100%;
+    display: block;
+    transition: top 1s ease;
+    overflow: hidden;
+    background-color: rgba(50, 50, 50, 0.5);
+    /* background-image: linear-gradient(blue, green, yellow, green); */
+}
+
+.paragrephs {
+    position: relative;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+    line-height: 1.4em;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    display: block;
+    font-size: 100px;
+    margin-top: 30px;
+    top: 15px;
+}
+
+.images {
+    width: 100%;
+    position: relative;
+}
+
+/* Style for music.html */
+#musicGallery {
+    /* position: relative;
+    width: 80%;   
+    height: 100%;
+    height: fit-content;
+    padding: 0% 10% 0% 10%;
+    margin: 2% 0%; */
+
+    position: relative;
+    width: 90%;
+    height: fit-content;
+    background-color: rgba(250, 250, 250, 0.5);
+    outline: 2px solid rgba(0, 0, 0, 0.5);
+    margin: auto;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coverImage {
+    width: 30%;
+    min-width: 124px;
+    min-height: 83px;
+}
+
+.songInMusicGallery:focus {
+    outline: none;
+}
+
+.songInMusicGallery {
+    width: 69.5%;
+    background-color: #F3F3F5;
+    /* padding: 5% 0% 5% 0%; */
+}
+
+#songsTable {
+    position: relative;
+    margin: auto;
+    width: 90%;
+    top: 50px;
+    background-color: white;
+    line-height: 4em;
+    overflow: hidden;
+}
+tr  {
+    /* background-color: white !important; */
+}
+
+tr:nth-child(n+1):hover {
+    cursor: pointer;
+    background-color: gray;
+    border: 3px solid gray;
+}
+
+td:hover::after,
+th:hover::after {
+  content: "";
+  position: absolute;
+  background-color: #ffa;
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+}
+
+/* images.html */
+#mainImage {
+    position: relative;
+    margin: auto;
+    width: 100%;
+}
+
+td,
+th {
+    text-align: center;
+}
+
+#imageNavDiv {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.imageNav {
+    width: 15%;
+    margin: 10px;
+}
+
+.imageNav:hover {
+    cursor: pointer;
+}
+
+/*About page*/
+input{
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+textarea{
+    outline: none;
+    border: none;
+    background: transparent;
+}
+.contact-content-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-content-wrapper{
+    position: relative;
+    border-radius: 10px;
+    width: 215px;
+    height: 60px;
+    overflow: hidden;
+    transition:all 0.5s ease-in-out;
+}
+.contact-button-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-button{
+    display: block;
+    font-weight: bold;
+    font-size: 30px;
+    color: #353535;
+    background-color: #eeeeee;
+    text-align: center;
+    padding: 10px 50px 15px 50px;
+    border-radius: 10px;
+    border: none;
+}
+
+.contact-container{
+    width: 100%;
+    min-height: 100%;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: rgb(216, 13, 165);
+}
+
+.contact-wrapper{
+    width: 500px;
+    background: #eeeeee;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 72px 55px 90px 55px;
+    position: relative;
+}
+
+.contact-form{
+    width: 100%;
+}
+
+.contact-title{
+    display: block;
+    font-weight: bold;
+    font-size: 40px;
+    color: #353535;
+    text-align: center;
+    padding-bottom: 75px;
+}
+
+.contact-input-wrap{
+    width: 100%;
+    position: relative;
+    border-bottom: 3px solid #969696;
+    margin-bottom: 50px;
+}
+
+.contact-input{
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    color: #414040;
+}
+
+.contact-input-focus{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.contact-input-focus::before{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    background: rgb(216, 13, 165);
+}
+
+.contact-input-focus::after{
+    content: attr(data-placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+
+    font-size: 15px;
+    color: #969696;
+    transition: all 0.5s;
+}
+
+input.contact-input{
+    height: 40px;
+}
+input.contact-input + .contact-input-focus::after {
+    top: 15px;
+    left: 0;
+}
+textarea.contact-input {
+    min-height: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+textarea.contact-input + .contact-input-focus::after {
+    top: 15px;
+    left: 0;
+}
+.contact-input:focus + .contact-input-focus::after {
+    top: -15px;
+  }
+  
+  .contact-input:focus + .contact-input-focus::before {
+    width: 100%;
+  }
+
+  .contact-submit-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-top: 30px;
+  }
+
+  .contact-submit-wrap{
+      display: block;
+      position: relative;
+      border-radius: 5px;
+      width: auto;
+      overflow: hidden;
+      margin: 0 auto;
+      z-index: 1;
+  }
+
+  .contact-submit-background{
+      position: absolute;
+      width: 200%;
+      height: 100%;
+      left: -100%;
+      z-index: -1;
+      background: purple;
+      background: linear-gradient(150deg, rgb(83, 6, 170), rgb(255, 0, 149), rgb(83, 6, 170));
+
+      -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+      transition: all 0.5;
+  }
+
+  .contact-submit{
+      outline: none !important;
+      border: none;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+      min-width: 250px;
+      height: 50px;
+
+      font-size: 20px;
+      font-weight: bold;
+      color: #eeeeee;
+  }
+
+  .contact-submit:hover{
+      cursor: pointer;
+  }
+
+  .contact-submit-wrap:hover .contact-submit-background{
+      left: 0;
+  }
