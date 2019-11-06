@@ -129,11 +129,11 @@ switch (page) {
         break
     case "events.html":
         all_list_items[3].className += " " + activeListItem;
-        all_links[3].className += " " + activeLink;
+        // all_links[3].className += " " + activeLink;
         break
     case "store.html":
         all_list_items[4].className += " " + activeListItem;
-        all_links[4].className += " " + activeLink;
+        // all_links[4].className += " " + activeLink;
         break
 }
 

@@ -23,6 +23,7 @@
     min-width: 124px;
     min-height: 83px;
     margin: auto;
+    border: 2px solid rgba(0, 0, 0, 0.5);
 }
 
 .explicit {
