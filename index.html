@@ -1,62 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="./media/favIconGuitar.png">
     <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/navigation.css">
+    <link rel="stylesheet" href="style/music.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300&display=swap" rel="stylesheet"> 
     <title>Jostein Hodne</title>
+    <style>
+        .cover{
+            width: 100vw;
+            height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left top;
+        }
+
+        #img1 {
+            background-image: url("media/jostein.jpeg");
+        }
+
+        #img2 {
+            background-image: url("media/small-steps.jpg");
+            height:60vh;
+        }
+
+        #navbar {
+            width:100%;
+            height:100px;
+            background-color: rgb(49, 49, 49);
+            position:sticky;
+            top:0;
+            font-family: Roboto;
+            font-size: 60px;
+            font-weight: 100;
+            text-align: center;
+            color: white;
+            z-index:3;
+            margin:0;
+        }
+         #placeholder{
+             min-height:200vh;
+         }
+
+        .title {
+            top: 40vh;
+            width:100%;
+            text-align:center;
+            font-family: Roboto;
+            font-weight: 100;
+            font-size: 100px;
+            color: white;
+            position:sticky;
+            -webkit-user-select: none;       
+            -moz-user-select: none;
+            -ms-user-select: none; 
+            user-select: none;
+            margin:0;
+        }
+
+        .text {
+            min-height:50vh;
+            background-color: rgb(29, 27, 27);
+            background-size: cover;
+            color: white;
+            padding-bottom: 20vh;
+        }
+
+        #down {
+            width: 5vw;
+            left: 45vw;
+            bottom: -80vh;
+            position: relative;
+        }
+        h1, h2 {
+            font-family: roboto;
+            font-weight: 100;
+            margin: 0;
+        }
+        
+        h2 {
+            font-size: 30px;
+            width:80%;
+            margin-left:10%;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            margin:0 5vw 0 5vw;
+        }
+    </style>
 </head>
-
 <body>
-    <div id="content" style="margin-top: 45%;">
-        <h1 id="josteinHodne">Jostein Hodne</h1>
-        <!-- Content -->
-        <img id="img1" class="images" src="media/jostein.jpg" alt="forsidebilde">
-        <div class="flex_box">
-            <p class="paragrephs">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus orci ac lacus sodales,
-                vel mattis arcu blandit. Morbi neque ipsum, faucibus ut ante nec, placerat semper odio. Ut non mollis
-                nisi, eu mollis sem. Morbi dignissim leo quis nulla accumsan sagittis. Class aptent taciti sociosqu
-                ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus ac vulputate lorem. Aenean et
-                consectetur enim, non finibus nisl. Aliquam a risus eget ex dapibus efficitur sed eu felis. Orci varius
-                natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce vitae aliquet ex, non
-                rutrum augue. Sed id risus turpis. Nam auctor, tellus non luctus eleifend, lectus neque faucibus sapien,
-                at porttitor sem libero ac diam. Integer tellus felis, posuere sed nisi nec, scelerisque faucibus leo.
-                Proin iaculis congue vehicula.
-            </p>
-            <p class="paragrephs">
-                In pretium nisi eu mauris vehicula, in rhoncus mi facilisis. Nunc porttitor commodo feugiat. Quisque
-                aliquam purus eget bibendum ullamcorper. Praesent faucibus convallis laoreet. Curabitur quis venenatis
-                ante, at vestibulum libero. Aliquam ac tincidunt enim, vitae varius dolor. Cras feugiat vehicula lorem
-                ut
-                gravida. Integer elementum, tortor id condimentum feugiat, augue libero sollicitudin est, sed cursus
-                risus
-                tellus ac ante. Quisque a accumsan urna, at egestas elit. Integer in augue vel ante congue dignissim id
-                tincidunt lectus. Morbi id venenatis libero. Etiam vel nunc in massa dignissim imperdiet id ac justo.
-                Nulla
-                facilisi. Sed mollis justo vel mauris feugiat, quis consequat mi mattis. Morbi ullamcorper iaculis
-                blandit.
-                Nunc a metus ut dolor dignissim sollicitudin.
-                ante, at vestibulum libero. Aliquam ac tincidunt enim, vitae varius dolor. Cras feugiat vehicula lorem
-                ut
-                gravida. Integer elementum, tortor id condimentum feugiat, augue libero sollicitudin est, sed cursus
-                risus
-                tellus ac ante. Quisque a accumsan urna, at egestas elit. Integer in augue vel ante congue dignissim id
-                tincidunt lectus. Morbi id venenatis libero. Etiam vel nunc in massa dignissim imperdiet id ac justo.
-                Nulla
-                facilisi. Sed mollis justo vel mauris feugiat, quis consequat mi mattis. Morbi ullamcorper iaculis
-                blandit.
-                Nunc a metus ut dolor dignissim sollicitudin.
-            </p>
+    <div id="placeholder">
+        <div class="cover" id="img1">
+            <div class="title">Jostein Hodne</div>
         </div>
-        <!-- /Content -->
+        <div id="navbar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="media.html">Media</a>
+                <a href="events.html">Events</a>
+                <a href="store.html">Store</a>
+            </ul></div>
+        <div class="text">
+            <h1>World Class guitarist!</h1><br>
+            <h2>Jostein Hodne is a 19-year old acoustic fingerstyle guitarist based in Trondheim, Norway.
+                He has performed alongside internationally renowned musicians such as Calum Graham and Livio Gianola, 
+                and has received praise from many leading figures in the guitar world such as Jon Gomm, Robin Sukroso, Federico Casagrande and Szandor Szabo for his original compositions
+                and expressive playing style. Following his first-place at the 2016 Akustiske Landskap guitar festival talent competition, 
+                Jostein worked towards bringing these compositions to the fingerstyle guitar scene through the release of his very virst album.
+                By releasing Small Steps(2019), Jostein made his debut to the guitar world, and has made a rather large step towards him and his music getting the recognition it deserves.<br><br>
+                The music from his debut album can be found on all music streaming sites, as well as right below this text.<br><br>
+                </h2>
+            <div id="musicGallery">
+                    <img id="coverImage" src="./media/small-steps.jpg" alt="song cover">
+                    <audio id="songInMusicGallery" src="media/si-beag-si-mo-r.mp3" controls></audio>
+                </div>
+                <ul id="songsList">
+                    <li id="songsListHeaders">
+                        <p></p>
+                        <p>Sang</p>
+                        <p>Album</p>
+                        <p>Content</p>
+                        <p>Cover</p>
+                    </li>
+                    <li class="songsListElement">
+                        <div><img class="playSlashPause" src="./media/playMusic.png" alt="" height="30"></div>
+                        <p class="songs">Amber</p>
+                        <p>Small steps</p>
+                        <div>
+                            <p class="explicit">Explicit</p>
+                        </div>
+                        <div><img src="./media/amber.jpg" alt="song-cover" height="30"></div>
+                    </li>
+                    <li class="songsListElement">
+                        <div><img class="playSlashPause" src="./media/playMusic.png" alt="" height="30"></div>
+                        <p class="songs">a' Fatij</p>
+                        <p>Small steps</p>
+                        <div>
+                            <p class="explicit" style="opacity: 0;">Explicit</p>
+                        </div>
+                        <div><img src="./media/smallSteps.jpg" alt="song-cover" height="30"></div>
+                    </li>
+                    <li class="songsListElement">
+                        <div><img class="playSlashPause" src="./media/playMusic.png" alt="" height="30"></div>
+                        <p class="songs">E du Nord</p>
+                        <p>Small steps</p>
+                        <div>
+                            <p class="explicit">Explicit</p>
+                        </div>
+                        <div><img src="./media/smallSteps.jpg" alt="song-cover" height="30"></div>
+                    </li>
+                    <li class="songsListElement">
+                        <div><img class="playSlashPause" src="./media/playMusic.png" alt="" height="30"></div>
+                        <p class="songs">Feel</p>
+                        <p>Small steps</p>
+                        <div>
+                            <p class="explicit" style="opacity: 0;">Explicit</p>
+                        </div>
+                        <div><img src="./media/smallSteps.jpg" alt="song-cover" height="30"></div>
+                    </li>
+                    <li class="songsListElement">
+                        <div><img class="playSlashPause" src="./media/playMusic.png" alt="" height="30"></div>
+                        <p class="songs">Hold Me Tight</p>
+                        <p>Small steps</p>
+                        <div>
+                            <p class="explicit">Explicit</p>
+                        </div>
+                        <div><img src="./media/smallSteps.jpg" alt="song-cover" height="30"></div>
+                    </li>
+                    <li class="songsListElement">
+                        <div><img class="playSlashPause" src="./media/playMusic.png" alt="" height="30"></div>
+                        <p class="songs">Sí Beag, Sí Mór</p>
+                        <p>Small steps</p>
+                        <div>
+                            <p class="explicit">Explicit</p>
+                        </div>
+                        <div><img src="./media/smallSteps.jpg" alt="song-cover" height="30"></div>
+                    </li>
+                    <li class="songsListElement">
+                        <div><img class="playSlashPause" src="./media/playMusic.png" alt="" height="30"></div>
+                        <p class="songs">The Most Beautiful Thing</p>
+                        <p>Small steps</p>
+                        <div>
+                            <p class="explicit" style="opacity: 0;">Explicit</p>
+                        </div>
+                        <div><img src="./media/tmbt.jpg" alt="song-cover" height="30"></div>
+                    </li>
+                </ul>
+                <!-- /Content -->
+        </div>
+        <div class="cover" id="img2">
+            <div class="title" style="color:black;">Follow Josteins journey</div>
+        </div>
+        <div class="text">
+            <h2 style="padding-top:20vh;">
+                While Small Steps is Josteins very first album, it certainly wont be his last.<br>
+                You can follow his journey in the fingerstyle guitar world directly through any of his social media, as well as streaming sites for music, some of which are linked below.
+                If you prefer real-life events rather than an online feed, check out Josteins upcomming events and get the oppurtunity to see him perform his compositions on a live stage.
+                You can find his upcomming events in the events tab on this very site, as well as physical and digital copies of his releases, music videos, and contact information,
+                all in their respective tabs.
+            </h2>
+        </div>
     </div>
-    <script type="text/javascript" src="script/navigation.js"></script>
-    <script type="text/javascript" src="script/main.js"></script>
+    <script src="script/main.js"></script>
+    <script src="script/music.js"></script>
 </body>
-
 </html>
