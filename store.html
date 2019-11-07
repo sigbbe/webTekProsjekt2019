@@ -1,6 +1,6 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +8,103 @@
     <link rel="icon" href="./media/favIconGuitar.png">
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/navigation.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300&display=swap" rel="stylesheet"> 
     <title>Jostein Hodne</title>
-</head>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        .covers {
+            height: 500px;
+            width:500px;
+            padding: 25px;
+            float: left;
+        }
 
+        .surround {
+            min-height: 550px;
+            width: 75vw;
+            margin:25px;
+            background-color: rgba(255, 255, 255, 0.1)
+        }
+
+        .description {
+            padding-top: 25px;
+            color:white;
+            font-size: 25px;;
+            font-family: roboto;
+            font-weight: 100;
+        }
+
+        .title {
+            font-size: 70px;
+        }
+
+        .purchase {
+            height: 5vh;
+            font-size:4vh;
+            width: 20vw;;
+            border: solid rgba(255, 255, 255, 0.4);
+            float:left;
+            text-align: center;
+            margin-right:10px;
+        }
+        .songs {
+            float:left;
+            color: white;
+            font-family: roboto;
+        }
+
+        a {
+            text-decoration: none;
+            color:white;
+        }
+
+    </style>
+</head>
 <body>
     <div id="content">
-        <h1 id="josteinHodne">Jostein Hodne</h1>
-        <!-- Content -->
+        <div class="surround">
+            <img class="covers" alt="small steps" src="media/small-steps.jpg">
+            <div class="description">
+                <div class="title">Small steps</div>
+                <a href="https://music.apple.com/no/album/small-steps/1481070108" target="none"><div class="purchase"> BUY THE ALBUM: $9 </div></a>
+                <a onclick="message();"><div class="purchase" id="CD"> BUY THE CD</div></a><br>
+                 <br>Contains the following songs:</div>
+                 <ul class="songs">
+                     <li>The Raven</li>
+                     <li>Homebound</li>
+                     <li>E du Nord</li>
+                     <li>Feel</li>
+                     <li>Hold me tight</li>
+                     <li>Sí Beag, Sí Mór</li>
+                     <li>Amber</li>
+                     <li>a' Fatij</li>
+                     <li>The Most Beautiful Thing</li>
+                 </ul>
+        </div>
+        <div class="surround">
+            <img class="covers" alt="small steps" src="media/tmbt.jpg">
+            <div class="description">
+                    <div class="title">The Most Beautiful Thing</div>
+                    <a href="https://music.apple.com/no/album/the-most-beautiful-thing-single/1476622728" target="none"><div class="purchase"> BUY THE SINGLE: $1 </div></a><br>
+                     <br>AAAAAAAAAAAAAAAAAAAAAAAAAA</div>
 
-        <!-- /Content -->
-    </div>
-    <script src="script/main.js"></script>
+        </div>
+        <div class="surround">
+            <img class="covers" alt="small steps" src="media/amber.jpg">
+            <div class="description">
+                    <div class="title">Amber</div>
+                    <a href="https://music.apple.com/no/album/amber-single/1468073184" target="none"><div class="purchase"> BUY THE SINGLE: $1 </div></a><br>
+                     <br>Lorem ipsum and shit</div>
+
+            </div>
+        </div>
     <script type="text/javascript" src="script/navigation.js"></script>
+    <script type="text/javascript" src="script/main.js"></script>
+    <script>
+    function message(){
+        alert('CDs are currently unavaliable for online sale, but can be found at any of josteins events')
+    }
+    </script>
 </body>
-
 </html>
+
