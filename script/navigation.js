@@ -4,7 +4,7 @@ var page = path.split("/").pop();
 
 const pageArray = [
     ["Home", "About", "Media", "Events", "Store"],
-    ["index.html", "about.html", "media.html", "events.html", "store.html"],
+    ["index.html", "about.html", "music.html", "events.html", "store.html"],
 ];
 
 const mediaSubPageArray = [
@@ -45,7 +45,6 @@ for (let i = 0; i < pageArray[0].length; i++) {
     a.className = "navigation_link";
     let li = document.createElement("li");
     li.className = "navigation_element";
-    li.appendChild(a)
     ul.appendChild(li)
     if (i == 2) {
         li.className += " dropbtn";
@@ -60,6 +59,7 @@ for (let i = 0; i < pageArray[0].length; i++) {
         li.id = "hover_navigation_element";
         li.appendChild(dropDownDiv);
     }
+    li.appendChild(a)
 }
 document.body.insertBefore(ul, document.body.childNodes[0])
 // document.body.appendChild(ul);
@@ -115,7 +115,7 @@ switch (page) {
     case "music.html":
         dropdown.childNodes[0].className += activeLink;
         dropdownActive();
-        window.addEventListener("resize", dropdownActive);
+        window.addEventListener("resize", dropdownActive);        
         break
     case "images.html":
         dropdown.childNodes[1].className += activeLink;
@@ -137,19 +137,25 @@ switch (page) {
         break
 }
 
-window.addEventListener("resize", () => {
-    if (document.body.clientWidth > 625) {
-        console.log("625+++");
-        document.getElementById("content").className = "";
-    }
-})
+// window.addEventListener("resize", () => {
+//     if (document.body.clientWidth > 625) {
+//         document.getElementById("content").className = "";
+//     }
+// })
+
 
 function dropdownActive() {
+    console.log("625+++");
     if (document.body.clientWidth > 625) {
         dropdown.style.display = "flex";
     } else {
         dropdown.style.display = "none";
         document.body.style.overflowY = "auto";
+        if (document.getElementById("navigation").className == "navMoveUp") {
+            document.getElementById("content").className = "moveDown";
+        } else {
+            document.getElementById("content").className = "moveUp";
+        }
     }
 }
 
