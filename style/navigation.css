@@ -53,14 +53,14 @@ li.navigation_element.activeListItem {
     position: absolute;
     width: fit-content;
     left: 50%;
-    z-index: 1;
     top: 95px;
     transform: translate(-50%, -50%);
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 #hover_navigation_element:hover .dropdown-content {
-    display: flex;
+    z-index: 1;
+    display: flex !important;
     justify-content: center;
 }
 
