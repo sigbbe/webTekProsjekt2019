@@ -77,6 +77,8 @@ audioPlayer.addEventListener("click", () => {
 function playThisSong() {
     let li = this.parentElement.parentElement;
     let index = getIndex(songsListElement, li);
+    const displaySongName = document.getElementById("displaySongName");
+    displaySongName.innerHTML = "Song: " + songDataBase[index].song;
     for (let i = 0; i < playButton.length; i++) {
         if (i == index) {
             li.style.backgroundColor = "rgba(234, 12, 76, 0.3)";
