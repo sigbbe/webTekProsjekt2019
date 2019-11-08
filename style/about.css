@@ -63,10 +63,10 @@ textarea {
 .contact-container {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    padding-top: 25px; /* Location of the box */
     left: 0;
     top: 0;
-    align-items: center;
+    padding-top: 25px;
+    align-items: baseline;
     justify-content: center;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
@@ -76,10 +76,11 @@ textarea {
 }
 
 .contact-wrapper {
-    width: 500px;
+    width: 540px;
+    max-height: 80%;
     background: #38414e;
     overflow: hidden;
-    padding: 40px 55px 90px 55px;
+    padding: 30px 30px 30px 30px;
     position: relative;
     animation: animatetop 0.5s;
 }
@@ -139,7 +140,7 @@ textarea {
     font-size: 40px;
     color: white;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 0px;
     padding-bottom: 50px;
 }
 
@@ -147,7 +148,7 @@ textarea {
     width: 100%;
     position: relative;
     border-bottom: 3px solid white;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .contact-input {
@@ -227,7 +228,8 @@ textarea.contact-input+.contact-input-focus::after {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 
 .contact-submit-wrap {
