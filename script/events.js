@@ -91,10 +91,10 @@ function initMap() {
     var marker = new google.maps.Marker({ position: ekeberg, map: map1 });
 
     // Map2
-    var stavern = { lat: 59.8950803, lng: 10.7741749 };
+    var stavern = { lat: 59.033025, lng: 10.009618 };
     var map2 = new google.maps.Map(document.getElementById('map2'), {
         center: stavern,
-        zoom: 11.9,
+        zoom: 13,
         disableDefaultUI: true,
         styles: style
     });
