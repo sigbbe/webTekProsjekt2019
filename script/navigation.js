@@ -61,7 +61,14 @@ for (let i = 0; i < pageArray[0].length; i++) {
     }
     li.appendChild(a)
 }
-document.body.insertBefore(ul, document.body.childNodes[0])
+
+if (page == "index.html") {
+    console.log(ul);
+    
+    document.querySelector(".stickyDiv").appendChild(ul)
+} else {
+    document.body.insertBefore(ul, document.body.childNodes[0])
+}
 // document.body.appendChild(ul);
 
 

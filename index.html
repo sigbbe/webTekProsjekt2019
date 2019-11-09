@@ -16,8 +16,8 @@
     }
     #wallpaper {
         width: 100vw;
-        overflow: hidden;
         height: 100vh;
+        overflow: hidden;
         margin: 0;
         padding: 0;
         display: flex;
@@ -27,31 +27,22 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        animation: moveViewPort 1s ease 2s 1;
-    }
-    #wallpaper img {
-        margin: 0;
-        padding: 0;
+        animation: moveViewPort 2s ease 1s 1;
     }
 
     #wallpaper h1 {
-        position: absolute;
-        top: 50vh;
-        left: 50vw;
+        position: relative;
+        margin: auto;
         width: fit-content;
-        transform: translate(-50%, -50%);
     }
 
-    #wallpaper h1::after { 
+    #wallpaper h1 div { 
         /* animation: name duration timing-function delay iteration-count direction fill-mode; */
         animation: transitionOnload 1s ease 0s 1;
         height: 15px;
-        bottom: -20%;
-
-        position: absolute;
+        position: relative;
         background-color: #ffffff;
         content: "";
-        /* border-radius: 5px; */
     }
 
     footer {
@@ -90,13 +81,16 @@
 
     @keyframes fadeHeading {
         from { opacity: 1;}
-        to {opacity: 0;}
+        to {opacity: 1;}
     } 
     </style>
 </head>
 <body style="min-height: 500vh;">
     <div id="wallpaper">
-        <h1 id="heading">JOSTEIN HODNE</h1>     
+        <h1 id="heading">
+            JOSTEIN HODNE
+            <div></div>
+        </h1>     
     </div>
     <div class="stickyDiv"></div>
     <script type="text/javascript" src="./script/navigation.js"></script>

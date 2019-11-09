@@ -78,8 +78,6 @@ li.navigation_element.activeListItem {
 
 #navigation a { transition: all 0.5s ease; }
 
-.navigation_element:nth-child(3) { background-color: rgba(16, 14, 35, 0.9) !important; }
-
 .navigation_element:hover,  
 .dropdown-content a:hover { background-color: rgba(16, 16, 16, 0.8); }
 
