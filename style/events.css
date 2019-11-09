@@ -106,11 +106,13 @@
 .imgContainer {
     height: 20%;
     flex: 1;
+    overflow: hidden;
 }
 
 
 .imgContainer img {
-    height: 100%;
+    width: 100%;
+    height: auto;
 }
 
 @keyframes animatetop {
