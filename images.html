@@ -11,7 +11,41 @@
     <link rel="stylesheet" href="style/navigation.css">
     <title>Jostein Hodne</title>
     <style>
-        .slides { display:none; }
+        #imgGallery {
+            display: flex;
+            justify-content: center;
+            align-content: space-around;
+            flex-wrap: wrap;
+            position: relative;
+            width: 90%;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .imgGalleryElement {
+            height: 100px;
+            width: 100px;
+            background-color: black;
+            margin: 5%;
+            display: flex;
+            align-items: center;
+        }
+        .imgGalleryElement:hover,
+        .imageSlideShowBtn:hover,
+        #playPause:hover { 
+            cursor: pointer; 
+            opacity: 1; 
+        }
+
+
+        .imgGalleryElement img {
+            width: 100%;
+        }
+
+        .slides { 
+            display:none; 
+        }
+
         #imageSlideShowDiv {
             position: relative;
             margin: auto;
@@ -32,29 +66,55 @@
             opacity: 0.7;
         }
 
-        #playPause:hover {
-            cursor: pointer;
-            opacity: 1;
-        }
-
         .imageSlideShowBtn {
             display: none;
         }
+
+
+        .imageSlideShowBtn {
+            margin: auto 10px auto 10px;
+            background-color: #ffffff;
+            color: #000000;
+            border: none;
+            height: 50px;
+            padding: 0px 20px 0px 20px;
+            opacity: .7;
+        }
+
+        .imageSlideShowBtn:focus { outline: none; }
 
     </style>
 </head>
 <body>
     <div id="content">
-        <h1 id="josteinHodne">Jostein Hodne</h1>
+        <h1 id="josteinHodne">Jostein Hodne's image slideshow</h1>
 
         <div id="imageSlideShowDiv" style="max-width:500px">
+            
             <button id="lastImg" class="imageSlideShowBtn" onclick="plusDivs(-1)">&#10094;</button>
+   
             <img class="slides" src="./media/amber.jpg" style="width:100%">
             <img class="slides" src="./media/nutFace.jpg" style="width:100%">
             <img class="slides" src="./media/jostein.jpeg" style="width:100%">
+            <img class="slides" src="./media/amber.jpg" style="width:100%">
+            <img class="slides" src="./media/nutFace.jpg" style="width:100%">
+            <img class="slides" src="./media/jostein.jpeg" style="width:100%">
+   
             <img id="playPause" src="./media/pauseMusic.png" alt="play/pause" height="50" width="50">
+   
             <button id="nextImg" class="imageSlideShowBtn" onclick="plusDivs(1)">&#10095;</button>
-          </div>          
+        
+        </div>
+        <div id="imgGallery">
+            <div class="imgGalleryElement"><img src="./media/amber.jpg" alt=""></div>
+            <div class="imgGalleryElement"><img src="./media/jostein.jpeg" alt=""></div>
+            <div class="imgGalleryElement"><img src="./media/jostein_vs_jimi.jpg" alt=""></div>
+            <div class="imgGalleryElement"><img src="./media/nutFace.jpg" alt=""></div>
+            <div class="imgGalleryElement"><img src="./media/amber.jpg" alt=""></div>
+            <div class="imgGalleryElement"><img src="./media/jostein.jpeg" alt=""></div>
+            <div class="imgGalleryElement"><img src="./media/jostein_vs_jimi.jpg" alt=""></div>
+            <div class="imgGalleryElement"><img src="./media/nutFace.jpg" alt=""></div>
+        </div>
     </div>
     <script type="text/javascript" src="script/images.js"></script>
     <script type="text/javascript" src="script/navigation.js"></script>
