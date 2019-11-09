@@ -8,11 +8,13 @@
     <title>J-Dog Hodne</title>
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/navigation.css">
+    <link rel="stylesheet" href="style/music.css">
     <style>
     div.stickyDiv {
         position: -webkit-sticky;
         position: sticky;
         top: 0;
+        z-index:5;
     }
     #wallpaper {
         width: 100vw;
@@ -39,14 +41,14 @@
     #wallpaper h1 div { 
         /* animation: name duration timing-function delay iteration-count direction fill-mode; */
         animation: transitionOnload 1s ease 0s 1;
-        height: 15px;
+        height: 5px;
         position: relative;
         background-color: #ffffff;
         content: "";
     }
 
     footer {
-        position: absolute;
+        position: relative;
         bottom: 0px !important;
         top: auto;
         width: 100%;
@@ -83,16 +85,192 @@
         from { opacity: 1;}
         to {opacity: 1;}
     } 
+    html {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .cover {
+        width: 100vw;
+        height: 100vh;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left top;
+    }
+    #img1 {
+        background-image: url("media/jostein.jpeg");
+    }
+    #img2 {
+        background-image: url("media/small-steps.jpg");
+        height: 60vh;
+    }
+    #placeholder {
+        min-height: 200vh;
+    }
+    .title {
+        top: 40vh;
+        width: 100%;
+        text-align: center;
+        font-family: Roboto;
+        font-weight: 100;
+        font-size: 100px;
+        color: white;
+        position: sticky;
+        margin: 0;
+    }
+    .text {
+        min-height: 50vh;
+        background-color: rgb(29, 27, 27);
+        background-size: cover;
+        color: white;
+        padding-bottom: 20vh;
+        margin-bottom: 0;
+    }
+    #down {
+        width: 5vw;
+        left: 45vw;
+        bottom: -80vh;
+        position: relative;
+    }
+    h1,
+    h2 {
+        font-family: roboto;
+        font-weight: 100;
+        margin: 0;
+    }
+    h2 {
+        font-size: 30px;
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+    #body {
+        min-height:100%;
+    }
     </style>
 </head>
-<body style="min-height: 500vh;" onLoad="window.scroll(0, 150)">
+<body onLoad="window.scroll(0, 150)">
     <div id="wallpaper">
         <h1 id="heading">
-            JOSTEIN HODNE
+            Jostein Hodne
             <div></div>
         </h1>     
     </div>
+    <div id="body">
     <div class="stickyDiv"></div>
+        <div class="text">
+            <h1>World Class guitarist!</h1><br>
+            <h2>Jostein Hodne is a 19-year old acoustic fingerstyle guitarist based in Trondheim, Norway.
+                He has performed alongside internationally renowned musicians such as Calum Graham and Livio Gianola,
+                and has received praise from many leading figures in the guitar world such as Jon Gomm, Robin Sukroso,
+                Federico Casagrande and Szandor Szabo for his original compositions
+                and expressive playing style. Following his first-place at the 2016 Akustiske Landskap guitar festival
+                talent competition,
+                Jostein worked towards bringing these compositions to the fingerstyle guitar scene through the release
+                of his very virst album.
+                By releasing Small Steps(2019), Jostein made his debut to the guitar world, and has made a rather large
+                step towards him and his music getting the recognition it deserves.<br><br>
+                The music from his debut album can be found on all music streaming sites, as well as right below this
+                text.<br><br>
+            </h2>
+            <div id="musicGallery">
+                <img id="coverImage" src="./media/small-steps.jpg" alt="song cover">
+                <audio id="songInMusicGallery" src="media/si-beag-si-mo-r.mp3" controls></audio>
+            </div>
+            <ul id="songsList">
+                <li id="songsListHeaders">
+                    <p></p>
+                    <p>Sang</p>
+                    <p>Album</p>
+                    <p>Content</p>
+                    <p>Cover</p>
+                </li>
+                <li class="songsListElement">
+                    <div><img class="playSlashPause" src="./media/playMusic.png" alt="" height="30"></div>
+                    <p class="songs">Amber</p>
+                    <p>Small steps</p>
+                    <div>
+                        <p class="explicit">Explicit</p>
+                    </div>
+                    <div><img src="./media/amber.jpg" alt="song-cover" height="30"></div>
+                </li>
+                <li class="songsListElement">
+                    <div><img class="playSlashPause" src="./media/playMusic.png" alt="" height="30"></div>
+                    <p class="songs">a' Fatij</p>
+                    <p>Small steps</p>
+                    <div>
+                        <p class="explicit" style="opacity: 0;">Explicit</p>
+                    </div>
+                    <div><img src="./media/smallSteps.jpg" alt="song-cover" height="30"></div>
+                </li>
+                <li class="songsListElement">
+                    <div><img class="playSlashPause" src="./media/playMusic.png" alt="" height="30"></div>
+                    <p class="songs">E du Nord</p>
+                    <p>Small steps</p>
+                    <div>
+                        <p class="explicit">Explicit</p>
+                    </div>
+                    <div><img src="./media/smallSteps.jpg" alt="song-cover" height="30"></div>
+                </li>
+                <li class="songsListElement">
+                    <div><img class="playSlashPause" src="./media/playMusic.png" alt="" height="30"></div>
+                    <p class="songs">Feel</p>
+                    <p>Small steps</p>
+                    <div>
+                        <p class="explicit" style="opacity: 0;">Explicit</p>
+                    </div>
+                    <div><img src="./media/smallSteps.jpg" alt="song-cover" height="30"></div>
+                </li>
+                <li class="songsListElement">
+                    <div><img class="playSlashPause" src="./media/playMusic.png" alt="" height="30"></div>
+                    <p class="songs">Hold Me Tight</p>
+                    <p>Small steps</p>
+                    <div>
+                        <p class="explicit">Explicit</p>
+                    </div>
+                    <div><img src="./media/smallSteps.jpg" alt="song-cover" height="30"></div>
+                </li>
+                <li class="songsListElement">
+                    <div><img class="playSlashPause" src="./media/playMusic.png" alt="" height="30"></div>
+                    <p class="songs">Sí Beag, Sí Mór</p>
+                    <p>Small steps</p>
+                    <div>
+                        <p class="explicit">Explicit</p>
+                    </div>
+                    <div><img src="./media/smallSteps.jpg" alt="song-cover" height="30"></div>
+                </li>
+                <li class="songsListElement">
+                    <div><img class="playSlashPause" src="./media/playMusic.png" alt="" height="30"></div>
+                    <p class="songs">The Most Beautiful Thing</p>
+                    <p>Small steps</p>
+                    <div>
+                        <p class="explicit" style="opacity: 0;">Explicit</p>
+                    </div>
+                    <div><img src="./media/tmbt.jpg" alt="song-cover" height="30"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="cover" id="img2">
+            <div class="title" style="color:black;">Follow Josteins journey</div>
+        </div>
+        <div class="text">
+            <h2 style="padding-top:20vh;">
+                While Small Steps is Josteins very first album, it certainly wont be his last.<br>
+                You can follow his journey in the fingerstyle guitar world directly through any of his social media, as
+                well as streaming sites for music, some of which are linked below.
+                If you prefer real-life events rather than an online feed, check out Josteins upcomming events and get
+                the oppurtunity to see him perform his compositions on a live stage.
+                You can find his upcomming events in the events tab on this very site, as well as physical and digital
+                copies of his releases, music videos, and contact information,
+                all in their respective tabs.
+            </h2>
+        </div>
+        </div>
+    <script src="script/main.js"></script>
+    <script src="script/music.js"></script>
     <script type="text/javascript" src="./script/navigation.js"></script>
     <script type="text/javascript" src="./script/index.js"></script>
 </body>
