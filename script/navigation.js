@@ -103,6 +103,16 @@ switch (page) {
     case "index.html":
         all_list_items[0].className += " " + activeListItem;
         all_links[0].className += " " + activeLink;
+        console.log(document.querySelector(".stickyDiv"));
+        
+        document.querySelector(".stickyDiv").appendChild(ul)
+        // document.getElementById("indexContent").insertBefore(ul, document.getElementById("indexContent").childNodes[1]);
+        // document.body.removeChild(ul)
+         
+        // console.log(ul);      
+        // console.log(document.getElementById("indexContent"));
+        // console.log(document.getElementById("indexContent").childNodes[0]);
+                        
         break
     case "about.html":
         all_list_items[1].className += " " + activeListItem;
@@ -137,15 +147,8 @@ switch (page) {
         break
 }
 
-// window.addEventListener("resize", () => {
-//     if (document.body.clientWidth > 625) {
-//         document.getElementById("content").className = "";
-//     }
-// })
-
 
 function dropdownActive() {
-    console.log("625+++");
     if (document.body.clientWidth > 625) {
         dropdown.style.display = "flex";
     } else {

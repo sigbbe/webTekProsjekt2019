@@ -6,6 +6,7 @@
     text-align: center;
     padding-inline-start: 0px;
     transition: top 0.8s ease;
+    width: 80%;
     /* background-image: linear-gradient(to right, rgba(16, 14, 35, 0), rgba(16, 14, 35, 1), rgba(16, 14, 35, 0));     */
 }
 
@@ -80,10 +81,11 @@ li.navigation_element.activeListItem {
 .dropdown-content a:hover { background-color: rgba(16, 16, 16, 0.8); }
 
 #content.moveDown {
-    top: 60px;
+    top: 0px;
 }
 
-@media only screen and (max-width: 625px) {
+/* @media only screen and (max-width: 625px) { */
+@media only screen and (max-width: 780px) {
     h1 {
         font-size: 40px;
     }
@@ -227,14 +229,14 @@ li.navigation_element.activeListItem {
 
 footer {
     position: relative;
-    width: 100%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     top: 90px;
     padding: 0.5rem;
     text-align: center;
-    /* background-color: rgba(16, 14, 35, 0.9); */
-    background-image: linear-gradient(to right, rgba(16, 14, 35, 0.2), rgba(16, 14, 35, 1), rgba(16, 14, 35, 0.2));
+    background-color: rgba(16, 14, 35, 0.9);
+    /* background-image: linear-gradient(to right, rgba(16, 14, 35, 0.2), rgba(16, 14, 35, 1), rgba(16, 14, 35, 0.2)); */
 }
 
 footer a {
