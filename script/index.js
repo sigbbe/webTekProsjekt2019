@@ -1,3 +1,9 @@
+window.onload = function () {
+    console.log();
+    
+}
+
+
 let animationDelay = setTimeout(animationDelayFunction, 3000);
 document.body.style.overflowY = "hidden";
 const wallpaper = document.getElementById("wallpaper");
