@@ -12,7 +12,6 @@ function carousel() {
     slideIndex++;
     if (slideIndex > x.length) {slideIndex = 1}
     x[slideIndex-1].style.display = "block";
-    console.log(n);
 }
 
 var slideIndex = 1;
