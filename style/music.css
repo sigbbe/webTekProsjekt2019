@@ -42,8 +42,7 @@
 
 #displaySongName {
     position: absolute;
-    right: 0%;
-    bottom: 0%;
+    left: 5vw;
     margin-bottom: 5px;
     color: #ffffff;
     margin-right: 50px;
