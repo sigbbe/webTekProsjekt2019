@@ -1,16 +1,18 @@
 #navigation {
-    display: flex-box;
+    display: flex;
+    
     align-items: flex-start;
     justify-content: center;
     margin: auto;
     text-align: center;
-    padding-inline-start: 0px;
+
+    padding: 0px;
     transition: top 0.8s ease;
     width: 100%;
     background-color: rgb(30, 30, 30);
-    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
-              0 2px 2px rgba(0,0,0,0.11), 
-              0 4px 4px rgba(0,0,0,0.11), 
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11),
+              0 2px 2px rgba(0,0,0,0.11),
+              0 4px 4px rgba(0,0,0,0.11),
               0 6px 8px rgba(0,0,0,0.11),
               0 8px 16px rgba(0,0,0,0.11);
     /* background-image: linear-gradient(to right, rgba(16, 14, 35, 0), rgba(16, 14, 35, 1), rgba(16, 14, 35, 0));     */
@@ -51,9 +53,9 @@
 .dropdown-content .activeLink,
 li.navigation_element.activeListItem {
     background-color: rgba(16, 16, 16, 1);
-    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
-              0 2px 2px rgba(0,0,0,0.11), 
-              0 4px 4px rgba(0,0,0,0.11), 
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11),
+              0 2px 2px rgba(0,0,0,0.11),
+              0 4px 4px rgba(0,0,0,0.11),
               0 6px 8px rgba(0,0,0,0.11),
               0 8px 16px rgba(0,0,0,0.11);
     border-bottom: 2px solid #ffffff;
@@ -69,9 +71,9 @@ li.navigation_element.activeListItem {
     left: 50%;
     top: 95px;
     transform: translate(-50%, -50%);
-    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
-              0 2px 2px rgba(0,0,0,0.11), 
-              0 4px 4px rgba(0,0,0,0.11), 
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11),
+              0 2px 2px rgba(0,0,0,0.11),
+              0 4px 4px rgba(0,0,0,0.11),
               0 6px 8px rgba(0,0,0,0.11),
               0 8px 16px rgba(0,0,0,0.11);
 }
@@ -92,7 +94,7 @@ li.navigation_element.activeListItem {
 
 #navigation a { transition: all 0.5s ease; }
 
-.navigation_element:hover,  
+.navigation_element:hover,
 .dropdown-content a:hover { background-color: rgba(16, 16, 16, 0.8); }
 
 #content.moveDown {
@@ -140,6 +142,9 @@ li.navigation_element.activeListItem {
         position: relative;
         left: 0%;
         top: -50%;
+        flex-direction: column;
+
+        align-items: center;
     }
 
     .navigation_element {
@@ -149,6 +154,7 @@ li.navigation_element.activeListItem {
         flex-flow: column;
         padding: 0;
         height: 30px;
+        width: 100%;
     }
 
     .navigation_element a {
@@ -182,9 +188,9 @@ li.navigation_element.activeListItem {
 
     #hover_navigation_element:hover .navigation_link {
         background-color: transparent;
-        opacity: 0;    
+        opacity: 0;
     }
-   
+
     .dropdown-content a:hover {
         background-color: rgba(16, 14, 35, 0.0);
     }
@@ -252,9 +258,9 @@ footer {
     padding: 0.5rem;
     text-align: center;
     background-color: rgba(30, 30, 30, 0.9);
-    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
-              0 2px 2px rgba(0,0,0,0.11), 
-              0 4px 4px rgba(0,0,0,0.11), 
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11),
+              0 2px 2px rgba(0,0,0,0.11),
+              0 4px 4px rgba(0,0,0,0.11),
               0 6px 8px rgba(0,0,0,0.11),
               0 8px 16px rgba(0,0,0,0.11);
 }
