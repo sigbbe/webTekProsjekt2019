@@ -272,10 +272,6 @@ h1 {
     overflow: hidden;
 }
 
-tr {
-    /* background-color: white !important; */
-}
-
 tr:nth-child(n+1):hover {
     cursor: pointer;
     background-color: gray;
