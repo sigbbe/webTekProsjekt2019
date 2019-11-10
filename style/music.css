@@ -3,8 +3,14 @@
     position: relative;
     width: 90%;
     height: fit-content;
-    background-color: darkgray;
-    outline: 2px solid rgba(0, 0, 0, 0.9);
+    /*background-color: darkgray;
+    outline: 2px solid rgba(0, 0, 0, 0.9);*/
+    background-color: rgb(42, 42, 42);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+              0 2px 2px rgba(0,0,0,0.11), 
+              0 4px 4px rgba(0,0,0,0.11), 
+              0 6px 8px rgba(0,0,0,0.11),
+              0 8px 16px rgba(0,0,0,0.11);
     margin: auto;
     padding: 5px;
     display: flex;
@@ -19,20 +25,28 @@
 
 #coverImage {
     /* width: 30%; */
-    height: 200px;
-    min-width: 124px;
+    height: 100px;
+    min-width: 100px;
     min-height: 83px;
     margin: auto;
-    border: 2px solid rgba(0, 0, 0, 0.5);
-    background-color: rgba(16, 14, 35, 0.9);
+    /*border: 2px solid rgba(0, 0, 0, 0.5);
+    background-color: rgba(16, 14, 35, 0.9);*/
     /* background-color: rgba(28, 134, 212, 0.4); */
+    background-color: rgb(42, 42, 42);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+              0 2px 2px rgba(0,0,0,0.11), 
+              0 4px 4px rgba(0,0,0,0.11), 
+              0 6px 8px rgba(0,0,0,0.11),
+              0 8px 16px rgba(0,0,0,0.11);
 }
 
 #displaySongName {
     position: absolute;
     right: 0%;
     bottom: 0%;
-    margin-right: 20px;
+    margin-bottom: 5px;
+    color: #ffffff;
+    margin-right: 50px;
 }
 
 .explicit {
@@ -54,6 +68,7 @@
     width: 69.5%;
     background-color: #F3F3F5;
     margin: auto;
+    border-radius: 25px;
 }
 
 #songsList {
@@ -65,7 +80,12 @@
     min-width: 370px;
     height: fit-content;
     color: #ffffff;
-    background-color: #181818;
+    background-color: rgb(42, 42, 42);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+              0 2px 2px rgba(0,0,0,0.11), 
+              0 4px 4px rgba(0,0,0,0.11), 
+              0 6px 8px rgba(0,0,0,0.11),
+              0 8px 16px rgba(0,0,0,0.11);
     padding: 0;
 }
 
@@ -100,7 +120,7 @@
     padding: 30px 0px 0px 0px;
     width: 100%;
     height: fit-content;
-    background-color: #9c9191;
+    background-color: rgb(70, 70, 70);
 }
 
 .songsListElement {
@@ -109,6 +129,7 @@
     justify-content: space-around;
     align-items: flex-end;
     border-bottom: .5px solid darkgray;
+    background-color: rgb(42, 42, 42);
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -116,7 +137,7 @@
 }
 
 .songsListElement:hover {
-    background-color: #282828 !important;
+    background-color: rgba(0, 0, 0, 0.1) !important;
 }
 
 .songsListElement:hover .playSlashPause {

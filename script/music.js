@@ -81,10 +81,10 @@ function playThisSong() {
     displaySongName.innerHTML = "Song: " + songDataBase[index].song;
     for (let i = 0; i < playButton.length; i++) {
         if (i == index) {
-            li.style.backgroundColor = "rgba(234, 12, 76, 0.3)";
+        li.style.backgroundColor = "rgba(234, 12, 76, 0.3)";
             continue
         }
-        songsListElement[i].style.backgroundColor = "#000000";
+        songsListElement[i].style.backgroundColor = "rgb(42, 42, 42)";
         playButton[i].src = "./media/playMusic.png";
         songDataBase[i].paused = true;
         console.log(songsListElement[i]);
