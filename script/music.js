@@ -12,7 +12,7 @@ for (i = 0; i < playButton.length; i++) {
 
 const songDataBase = [
     {
-        song: "amber-feat-jostein-hodne",
+        song: "Inspired and named after the colour of a beautiful sunrise.   ",
         album: "Small steps",
         explicit: true,
         coverImage: "./media/amber.jpg",
@@ -20,7 +20,7 @@ const songDataBase = [
         paused: true
     },
     {
-        song: "a' Fatij",
+        song: "Inspired by the socio-economic difficulties currently troubling southern Italy. In local dialect a’fatij means «The burden». ",
         album: "SkrtSkrt",
         explicit: true,
         coverImage: "./media/smallSteps.jpg",
@@ -28,7 +28,7 @@ const songDataBase = [
         paused: true
     },
     {
-        song: "E du nord",
+        song: "An acoustic guitar interpretation of Kari Bremnes’ song by the same name. ",
         album: "SkrtSkrt",
         explicit: true,
         coverImage: "./media/smallSteps.jpg",
@@ -36,7 +36,7 @@ const songDataBase = [
         paused: true
     },
     {
-        song: "Feel",
+        song: "A very special song to me, this is the very first song I wrote.   ",
         album: "SkrtSkrt",
         explicit: true,
         coverImage: "./media/smallSteps.jpg",
@@ -44,7 +44,7 @@ const songDataBase = [
         paused: true
     },
     {
-        song: "Hold me tight",
+        song: "One of my personal favourites, this tune is about when life takes a bad turn, and all you really want is someone to hold you tight, hence the title.",
         album: "SkrtSkrt",
         explicit: true,
         coverImage: "./media/smallSteps.jpg",
@@ -52,7 +52,7 @@ const songDataBase = [
         paused: true
     },
     {
-        song: "Si beag si mo'r.mp3",
+        song: "My favourite irish folk tune that I have arranged for solo guitar, originally by Turlough O’Carolan.  ",
         album: "SkrtSkrt",
         explicit: true,
         coverImage: "./media/smallSteps.jpg",
@@ -60,10 +60,10 @@ const songDataBase = [
         paused: true
     },
     {
-        song: "The most beautiful thing",
+        song: "A song about the most beautiful thing",
         album: "SkrtSkrt",
         explicit: true,
-        coverImage: "./media/smallSteps.jpg",
+        coverImage: "./media/tmbt.jpg",
         audioFile: "./media/the-most-beautiful-thing.mp3",
         paused: true
     }
@@ -78,7 +78,7 @@ function playThisSong() {
     let li = this.parentElement.parentElement;
     let index = getIndex(songsListElement, li);
     const displaySongName = document.getElementById("displaySongName");
-    displaySongName.innerHTML = "Song: " + songDataBase[index].song;
+    displaySongName.innerHTML = songDataBase[index].song;
     for (let i = 0; i < playButton.length; i++) {
         if (i == index) {
         li.style.backgroundColor = "rgba(234, 12, 76, 0.3)";
