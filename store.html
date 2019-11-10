@@ -9,122 +9,8 @@
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/navigation.css">
     <link rel="stylesheet" href="style/events.css">
-
+    <link rel="stylesheet" href="style/store.css">
     <title>Jostein Hodne</title>
-    <style>
-        .covers {
-            height: 500px;
-            width:500px;
-            padding: 25px;
-            float: left;
-        }
-
-        .surround {
-            min-height: 550px;
-            width: 75vw;
-            margin:25px;
-            background-color: rgba(255, 255, 255, 0.1)
-        }
-
-        .description {
-            padding-top: 25px;
-            color:white;
-            font-size: 25px;;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 100;
-        }
-
-        .title {
-            font-size: 70px;
-        }
-
-        .purchase {
-            height: auto;
-            font-size: 20px;
-            width: auto;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            float:left;
-            text-align: center;
-            justify-content: center;
-            vertical-align: middle;
-            margin-right:10px;
-            padding: 5px 10px;
-            box-shadow: 0 1px 1px rgba(0,0,0,0.11),
-              0 2px 2px rgba(0,0,0,0.11),
-              0 4px 4px rgba(0,0,0,0.11),
-              0 6px 8px rgba(0,0,0,0.11),
-              0 8px 16px rgba(0,0,0,0.11);
-        }
-
-        .modal-content {
-            background-color: rgb(30, 30, 30);
-            width: 600px;
-            margin: auto;
-            color: white;
-            height: fit-content;
-            min-height: 0;
-            display: flex;
-        }
-
-        .imgContainer {
-            height: auto;
-            width: 50%;
-        }
-
-        .songs {
-            float:left;
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        a {
-            text-decoration: none;
-            color:white;
-        }
-
-        h2 {
-            color: #ffffff;
-            text-align: left;
-            position: relative;
-            display: block;
-            font-size: 40px;
-            margin: 0px 0px 30px 0px;
-        }
-
-        #albums, #singles {
-            margin-bottom: 100px;
-        }
-
-        h3 {
-            margin-bottom: 0;
-        }
-
-        .eventText p {
-            margin-top: 10px;
-        }
-
-        .modal-content img {
-            width: 50%;
-            margin: 40px 0px 40px 0;
-        }
-
-        .close {
-            z-index: 1;
-        }
-
-        .eventDisc {
-            padding-left: 20px;
-            padding-bottom: 40px;
-        }
-
-        #singles .purchase {
-            margin-top: 0;
-        }
-
-        #singles .eventElement {
-            cursor: default;
-        }
-    </style>
 </head>
 <body>
     <div id="content">
@@ -188,34 +74,6 @@
         </div>
     </div>
     <script type="text/javascript" src="script/navigation.js"></script>
-    <script type="text/javascript" src="script/main.js"></script>
-    <script>
-
-    function message(){
-        alert('CDs are currently unavaliable for online sale, but can be found at any of josteins events')
-
-    }
-
-    var events = document.getElementsByClassName("eventElement");
-    var modals = document.getElementsByClassName("modal");
-
-    var event = events[0];
-    var modal = modals[0];
-    let span = modal.childNodes[1].childNodes[3];
-
-    event.addEventListener("click", () => {
-        modal.style.display = "block";
-    });
-
-    span.addEventListener("click", () => {
-        modal.style.display = "none";
-    });
-
-    window.addEventListener("click", (skrt) => {
-        if (skrt.target == modal) {
-            modal.style.display = "none";
-        }
-    });
-    </script>
+    <script src="script/store.js"></script>
 </body>
 </html>
