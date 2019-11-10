@@ -7,7 +7,6 @@ const songs = document.querySelectorAll(".songs")
 let i;
 for (i = 0; i < playButton.length; i++) {
     playButton[i].addEventListener("click", playThisSong);
-    songs[i].addEventListener("click", playThisSong);
 }
 
 const songDataBase = [
@@ -71,13 +70,15 @@ const songDataBase = [
 
 audioPlayer.addEventListener("click", () => {
     console.log(this);
-
 });
 
 function playThisSong() {
     let li = this.parentElement.parentElement;
     let index = getIndex(songsListElement, li);
     const displaySongName = document.getElementById("displaySongName");
+    console.log(songsListElement, li);
+    console.log(li in songsListElement);
+    
     displaySongName.innerHTML = "Song: " + songDataBase[index].song;
     for (let i = 0; i < playButton.length; i++) {
         if (i == index) {

@@ -4,14 +4,16 @@ let time;
 time = setInterval(carousel, 5000); // Endre bildet hvert 5 sekund
 carousel();
 function carousel() {
-    var i;
-    var x = document.getElementsByClassName("slides");
-    for (i = 0; i < x.length; i++) {
+    let x = document.getElementsByClassName("slides");
+    for (let i = 0; i < x.length; i++) {
         x[i].style.display = "none";
     }
     slideIndex++;
-    if (slideIndex > x.length) {slideIndex = 1}
+    if (slideIndex > x.length) {
+        slideIndex = 1
+    }
     x[slideIndex-1].style.display = "block";
+    imgElementClickFunction(slideIndex - 1);
 }
 
 var slideIndex = 1;
@@ -20,18 +22,23 @@ showDivs(slideIndex);
 function plusDivs(n) {
     showDivs(slideIndex += n);
 }
-
 function showDivs(n) {
-    var i;
+    console.log(n);
+    
     var x = document.getElementsByClassName("slides");
     if (n > x.length) {slideIndex = 1}
     if (n < 1) {slideIndex = x.length}
-    for (i = 0; i < x.length; i++) {
+
+    for (let i = 0; i < x.length; i++) {
         x[i].style.display = "none";  
     }
+
+    imgElementClickFunction(slideIndex - 1);
     x[slideIndex-1].style.display = "block";  
 }
 
+
+// __________________________________________________________________________ 
 let playPause = document.getElementById("playPause");
 let imgSlideShow = document.getElementById("imageSlideShowDiv");
 imgSlideShow.addEventListener("mouseover", () => {
@@ -62,25 +69,36 @@ function playPauseFunction () {
     }
 }
 
-
-
-
 // __________________________________________________________________________
 for (let i = 0; i < imgGalleryElement.length; i++) {
-    imgGalleryElement[i].addEventListener("click", imgElementClickFunction)
+    imgGalleryElement[i].addEventListener("click", liiiiion);
 }
 
-function imgElementClickFunction () {
-    for (let i = 0; i < this.parentElement.childNodes.length; i++) {
-        this.parentElement.childNodes[i].style.boxShadow = "none";
+function liiiiion () {
+    let slides = document.querySelectorAll(".slides");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
-    this.style.boxShadow = "0px 0px 10px 10px red";
+    slides[getIndex(imgGalleryElement, this)].style.display = "block";    
+
+    // time = setInterval(carousel, 5000)
+    imgElementClickFunction(getIndex(imgGalleryElement, this));
 }
 
+function imgElementClickFunction (n) {
+    for (let i = 0; i < imgGalleryElement.length; i++) {
+        imgGalleryElement[i].zIndex = 0;
+        imgGalleryElement[i].style.borderBottom = "none";
+    }
+
+    imgGalleryElement[n].style.borderBottom = "3px solid #d90769";
+    imgGalleryElement[n].style.marginBottom = "-3px";
+    imgGalleryElement[n].style.zIndex = 10;
+}
 
 function getIndex(list, element) {
     for (let i = 0; i < list.length; i++) {
-        if (liste[i] == element) {
+        if (list[i] == element) {
             return i;
         }
     }

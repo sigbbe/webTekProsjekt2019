@@ -12,11 +12,6 @@
     align-items: center;
 }
 
-.songs:hover {
-    cursor: pointer;
-    text-decoration: underline;
-}
-
 #coverImage {
     /* width: 30%; */
     height: 200px;
@@ -80,13 +75,13 @@
     display: none;
     border-radius: 150%;
     transition: all .5s ease;
+    opacity: .7;
     top: 5px;
 }
 
 .playSlashPause:hover {
     cursor: pointer;
-    margin: -2.5px;
-    height: 35px;
+    opacity: 1;
 }
 
 #songsListHeaders {
@@ -113,6 +108,7 @@
     margin-right: auto;
     width: 100%;
     height: fit-content;
+    transition: height 1s ease;
 }
 
 .songsListElement:hover {

@@ -8,84 +8,9 @@
     <title>J-Dog Hodne</title>
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/navigation.css">
-    <style>
-    div.stickyDiv {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-    }
-    #wallpaper {
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        background-image: url("./media/jostein.jpg");
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        animation: moveViewPort 2s ease 1s 1;
-    }
-
-    #wallpaper h1 {
-        position: relative;
-        margin: auto;
-        width: fit-content;
-    }
-
-    #wallpaper h1 div { 
-        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-        animation: transitionOnload 1s ease 0s 1;
-        height: 15px;
-        position: relative;
-        background-color: #ffffff;
-        content: "";
-    }
-
-    footer {
-        position: absolute;
-        bottom: 0px !important;
-        top: auto;
-        width: 100%;
-        height: fit-content;
-        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-    }
-
-    @keyframes transitionOnload {
-        from {
-            opacity: 0;
-            left: 50%;
-            width: 0%;
-        }
-
-        to {
-            opacity: 1;
-            left: 0%;
-            width: 100%;
-        }
-    }
-
-    @keyframes moveViewPort {
-        from {
-            height: 100vh;
-        }
-        to {
-            height: 0vh;
-        }
-    }
-
-    #heading { animation: fadeHeading 1s ease 2s; }
-
-    @keyframes fadeHeading {
-        from { opacity: 1;}
-        to {opacity: 1;}
-    } 
-    </style>
+    <link rel="stylesheet" href="./style/index.css">
 </head>
-<body style="min-height: 500vh;" onLoad="window.scroll(0, 150)">
+<body style="min-height: 500vh;">
     <div id="wallpaper">
         <h1 id="heading">
             JOSTEIN HODNE

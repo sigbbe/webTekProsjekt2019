@@ -1,6 +1,6 @@
 window.onload = function () {
-    console.log();
-    
+    console.log(window);
+    window.scroll(0, 0);
 }
 
 

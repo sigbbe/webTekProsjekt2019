@@ -1,22 +1,26 @@
 #imgGallery {
     display: flex;
     justify-content: center;
-    align-content: space-around;
-    flex-wrap: wrap;
+    align-content: center;
     position: relative;
-    width: 90%;
+    width: fit-content;
+    max-width: 90%;
     margin: auto;
-    margin-top: 50px;
+    background-color: #ffffff;
+    margin-top: 15px;
+    min-height: 110px;
 }
 
 .imgGalleryElement {
     height: 100px;
     width: 100px;
-    background-color: black;
-    margin: 5%;
     display: flex;
     align-items: center;
+    margin: 5px;
+    background-color: #000000;
+    transition: border-bottom 1s ease;
 }
+
 .imgGalleryElement:hover,
 .imageSlideShowBtn:hover,
 #playPause:hover { 
@@ -27,20 +31,30 @@
 
 .imgGalleryElement img {
     width: 100%;
+    transition: width 1s ease;
 }
 
 .slides { 
     display:none; 
+    height: 500px;
+}
+
+#currentImage {
+    max-width: 90%;
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
 #imageSlideShowDiv {
     position: relative;
     margin: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: fit-content;
-    width: fit-content;
+    width: 100%;
 }
 
 #playPause {
@@ -57,15 +71,15 @@
     display: none;
 }
 
-
 .imageSlideShowBtn {
-    margin: auto 10px auto 10px;
     background-color: #ffffff;
     color: #000000;
     border: none;
     height: 50px;
     padding: 0px 20px 0px 20px;
     opacity: .7;
+    transition: all .5s ease;
+    z-index: 10;
 }
 
 .imageSlideShowBtn:focus { outline: none; }
