@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/navigation.css">
     <link rel="stylesheet" href="style/music.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <style>
     div.stickyDiv {
         position: -webkit-sticky;
@@ -94,18 +95,29 @@
     .cover {
         width: 100vw;
         height: 100vh;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: left top;
+        background-color: black;
+        position: relative;
+        overflow: hidden;
     }
     #img1 {
         background-image: url("media/jostein.jpeg");
     }
     #img2 {
-        background-image: url("media/small-steps.jpg");
-        height: 60vh;
+        background-image: url("media/jostein-nut-face.jpg");
+        height: 100%;
+        width: 100%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left top;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        filter: blur(2px);
+        opacity: 0.8;
+        transform: scale(1.1);
     }
     #placeholder {
         min-height: 200vh;
@@ -123,9 +135,10 @@
     }
     .text {
         min-height: 50vh;
-        background-color: rgb(29, 27, 27);
+        background-color: rgb(0, 0, 0);
         background-size: cover;
         color: white;
+        margin-top: 10vh;
         padding-bottom: 20vh;
         margin-bottom: 0;
     }
@@ -162,7 +175,7 @@
     <div id="body">
     <div class="stickyDiv"></div>
         <div class="text">
-            <h1>World Class guitarist!</h1><br>
+            <h1>World Class Guitarist!</h1><br>
             <h2>Jostein Hodne is a 19-year old acoustic fingerstyle guitarist based in Trondheim, Norway.
                 He has performed alongside internationally renowned musicians such as Calum Graham and Livio Gianola,
                 and has received praise from many leading figures in the guitar world such as Jon Gomm, Robin Sukroso,
@@ -253,8 +266,9 @@
                 </li>
             </ul>
         </div>
-        <div class="cover" id="img2">
-            <div class="title" style="color:black;">Follow Josteins journey</div>
+        <div class="cover" style="height: 60vh;">
+            <div id="img2"></div>
+            <div class="title" style="color:white; position: relative; display: block; top: 40%;">Follow Josteins Journey</div>
         </div>
         <div class="text">
             <h2 style="padding-top:20vh;">
@@ -273,5 +287,6 @@
     <script src="script/music.js"></script>
     <script type="text/javascript" src="./script/navigation.js"></script>
     <script type="text/javascript" src="./script/index.js"></script>
+    
 </body>
 </html>
