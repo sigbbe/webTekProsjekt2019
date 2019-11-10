@@ -11,7 +11,7 @@ function animationDelayFunction () {
     // document.body.style.overflowY = "auto";   
 }
 
-body.onload = function () {
+document.body.onload = function () {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
