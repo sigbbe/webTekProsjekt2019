@@ -125,6 +125,7 @@ li.navigation_element.activeListItem {
         left: 20px;
         top: 15px;
         transition: transform 0.8s ease;
+        z-index: 10;
     }
 
     #burgerNav:hover {
@@ -157,7 +158,7 @@ li.navigation_element.activeListItem {
     }
 
     .dropdown-content {
-        display: none;
+        display: none !important;
         width: 100%;
         top: 75px;
     }

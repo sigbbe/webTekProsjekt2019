@@ -40,15 +40,24 @@ function showDivs(n) {
 
 // __________________________________________________________________________ 
 let playPause = document.getElementById("playPause");
-let imgSlideShow = document.getElementById("imageSlideShowDiv");
-imgSlideShow.addEventListener("mouseover", () => {
-    playPause.style.display = "flex";
-    playPause.addEventListener("click", playPauseFunction);
+playPause.addEventListener("mouseover", function () {
+    this.style.display = "flex";
 });
 
-imgSlideShow.addEventListener("mouseleave", () => {
+const slides = document.querySelectorAll(".slides");
+for (let i = 0; i < slides.length; i++) {
+    slides[i].addEventListener("mouseover", mouseOverFunction);
+    slides[i].addEventListener("mouseleave", mouseleaveFunction);
+}
+function mouseOverFunction () {
+    playPause.style.display = "flex";
+    playPause.addEventListener("click", playPauseFunction);
+}
+function mouseleaveFunction () {
     playPause.style.display = "none";
-});
+}
+// let imgSlideShow = document.getElementById("imageSlideShowDiv");
+
 let isPlaying = true;
 const navButtons = document.querySelectorAll(".imageSlideShowBtn");
 navButtons[0].style.display = "flex !important";
@@ -71,16 +80,15 @@ function playPauseFunction () {
 
 // __________________________________________________________________________
 for (let i = 0; i < imgGalleryElement.length; i++) {
-    imgGalleryElement[i].addEventListener("click", liiiiion);
+    imgGalleryElement[i].addEventListener("click", imageGalleryClickFunction);
 }
 
-function liiiiion () {
+function imageGalleryClickFunction () {
     let slides = document.querySelectorAll(".slides");
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     slides[getIndex(imgGalleryElement, this)].style.display = "block";    
-
     // time = setInterval(carousel, 5000)
     imgElementClickFunction(getIndex(imgGalleryElement, this));
 }

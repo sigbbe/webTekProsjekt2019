@@ -59,15 +59,14 @@ for (let i = 0; i < pageArray[0].length; i++) {
         li.id = "hover_navigation_element";
         li.appendChild(dropDownDiv);
     }
-    li.appendChild(a)
+    li.appendChild(a);
 }
 
 if (page == "index.html") {
-    console.log(ul);
-    
-    document.querySelector(".stickyDiv").appendChild(ul)
+    // console.log(ul);
+    document.querySelector(".stickyDiv").appendChild(ul);
 } else {
-    document.body.insertBefore(ul, document.body.childNodes[0])
+    document.body.insertBefore(ul, document.body.childNodes[0]);
 }
 // document.body.appendChild(ul);
 
@@ -81,18 +80,22 @@ burgerNav.addEventListener("click", () => {
     const content = document.getElementById("content");
     if (onOff) {
         onOff = false;
-        ul.classList.remove("navMoveUp")
-        ul.classList.add("navMoveDown")
-        burgerNav.classList.remove("burgerNavTurn")
-        content.classList.remove("moveDown");
-        content.classList.add("moveUp");
+        ul.classList.remove("navMoveUp");
+        ul.classList.add("navMoveDown");
+        burgerNav.classList.remove("burgerNavTurn");
+        if (content != null) {
+            content.classList.remove("moveDown");
+            content.classList.add("moveUp");                
+        }
     } else {
         onOff = true;
-        ul.classList.add("navMoveUp")
-        ul.classList.remove("navMoveDown")
-        burgerNav.classList.add("burgerNavTurn")
-        content.classList.add("moveDown");
-        content.classList.remove("moveUp");
+        ul.classList.add("navMoveUp");
+        ul.classList.remove("navMoveDown");
+        burgerNav.classList.add("burgerNavTurn");
+        if (content != null) {
+            content.classList.add("moveDown");
+            content.classList.remove("moveUp");                    
+        }
     }
 });
 document.body.insertBefore(burgerNav, document.body.childNodes[1]);
@@ -110,16 +113,17 @@ switch (page) {
     case "index.html":
         all_list_items[0].className += " " + activeListItem;
         all_links[0].className += " " + activeLink;
-        console.log(document.querySelector(".stickyDiv"));
-        
         document.querySelector(".stickyDiv").appendChild(ul)
-        // document.getElementById("indexContent").insertBefore(ul, document.getElementById("indexContent").childNodes[1]);
-        // document.body.removeChild(ul)
-         
-        // console.log(ul);      
-        // console.log(document.getElementById("indexContent"));
-        // console.log(document.getElementById("indexContent").childNodes[0]);
-                        
+        const navigation = document.getElementById("navigation");
+        navigation.style.position = "fixed";
+        navigation.style.top = "0px";
+        const exit = document.getElementById("burgerNav");
+        moveNavBarIndex();
+        exit.style.position = "fixed";
+        burgerNav.addEventListener("click", function moveNavBarIndex () {
+            const navBar = document.getElementById("stickyDiv");
+            navBar.style.top = "-50px !important";
+        });
         break
     case "about.html":
         all_list_items[1].className += " " + activeListItem;
@@ -154,7 +158,6 @@ switch (page) {
         break
 }
 
-
 function dropdownActive() {
     if (document.body.clientWidth > 625) {
         dropdown.style.display = "flex";
@@ -168,7 +171,6 @@ function dropdownActive() {
         }
     }
 }
-
 
 // Make footer with social-media icons
 const footer = document.createElement("footer");
