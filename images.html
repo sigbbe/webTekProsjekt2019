@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="./media/favIconGuitar.png">
     <link rel="stylesheet" href="style/main.css">
-    <!-- <link rel="stylesheet" href="style/imageSlideShow.css"> -->
     <link rel="stylesheet" href="style/navigation.css">
     <link rel="stylesheet" href="./style/images.css">
     <title>Jostein Hodne</title>
@@ -16,17 +15,17 @@
     <div id="content">
         <h1 id="josteinHodne">Jostein Hodne's image slideshow</h1>
 
-        <div id="imageSlideShowDiv" style="max-width:500px">
+        <div id="imageSlideShowDiv">
             
             <button id="lastImg" class="imageSlideShowBtn" onclick="plusDivs(-1)">&#10094;</button>
-   
-            <img class="slides" src="./media/amber.jpg" style="width:100%">
-            <img class="slides" src="./media/nutFace.jpg" style="width:100%">
-            <img class="slides" src="./media/jostein.jpeg" style="width:100%">
-            <img class="slides" src="./media/amber.jpg" style="width:100%">
-            <img class="slides" src="./media/nutFace.jpg" style="width:100%">
-            <img class="slides" src="./media/jostein.jpeg" style="width:100%">
-   
+            <div id="currentImage">
+                <img class="slides" src="./media/amber.jpg">
+                <img class="slides" src="./media/nutFace.jpg">
+                <img class="slides" src="./media/jostein.jpeg">
+                <img class="slides" src="./media/smoke.jpg">
+                <img class="slides" src="./media/smallSteps.jpg">
+                <img class="slides" src="./media/tons.jpeg">        
+            </div>   
             <img id="playPause" src="./media/pauseMusic.png" alt="play/pause" height="50" width="50">
    
             <button id="nextImg" class="imageSlideShowBtn" onclick="plusDivs(1)">&#10095;</button>
@@ -34,13 +33,11 @@
         </div>
         <div id="imgGallery">
             <div class="imgGalleryElement"><img src="./media/amber.jpg" alt=""></div>
-            <div class="imgGalleryElement"><img src="./media/jostein.jpeg" alt=""></div>
-            <div class="imgGalleryElement"><img src="./media/jostein_vs_jimi.jpg" alt=""></div>
             <div class="imgGalleryElement"><img src="./media/nutFace.jpg" alt=""></div>
-            <div class="imgGalleryElement"><img src="./media/amber.jpg" alt=""></div>
             <div class="imgGalleryElement"><img src="./media/jostein.jpeg" alt=""></div>
-            <div class="imgGalleryElement"><img src="./media/jostein_vs_jimi.jpg" alt=""></div>
-            <div class="imgGalleryElement"><img src="./media/nutFace.jpg" alt=""></div>
+            <div class="imgGalleryElement"><img src="./media/smoke.jpg" alt=""></div>
+            <div class="imgGalleryElement"><img src="./media/smallSteps.jpg" alt=""></div>
+            <div class="imgGalleryElement"><img src="./media/tons.jpeg" alt=""></div>
         </div>
     </div>
     <script type="text/javascript" src="script/images.js"></script>
