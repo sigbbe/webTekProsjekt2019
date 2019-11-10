@@ -1,15 +1,12 @@
-window.onload = function () {
-    console.log();
-    
-}
-
-
 let animationDelay = setTimeout(animationDelayFunction, 3000);
-document.body.style.overflowY = "hidden";
+// document.body.style.overflowY = "hidden";
 const wallpaper = document.getElementById("wallpaper");
 
 
 function animationDelayFunction () {
-    wallpaper.style.height = "0px";
-    document.body.style.overflowY = "auto";   
+    // wallpaper.style.transition = "all .5s ease";
+    wallpaper.style.height = "0";
+    wallpaper.style.visibility = "hidde";
+    wallpaper.style.display = "none";
+    // document.body.style.overflowY = "auto";   
 }

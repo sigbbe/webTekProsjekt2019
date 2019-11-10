@@ -114,16 +114,6 @@ switch (page) {
         all_list_items[0].className += " " + activeListItem;
         all_links[0].className += " " + activeLink;
         document.querySelector(".stickyDiv").appendChild(ul)
-        const navigation = document.getElementById("navigation");
-        navigation.style.position = "fixed";
-        navigation.style.top = "0px";
-        const exit = document.getElementById("burgerNav");
-        moveNavBarIndex();
-        exit.style.position = "fixed";
-        burgerNav.addEventListener("click", function moveNavBarIndex () {
-            const navBar = document.getElementById("stickyDiv");
-            navBar.style.top = "-50px !important";
-        });
         break
     case "about.html":
         all_list_items[1].className += " " + activeListItem;
