@@ -91,7 +91,7 @@ textarea {
 .contact-wrapper {
     width: 540px;
     max-height: 80%;
-    background: #38414e;
+    background: rgb(42, 42, 42);
     overflow: hidden;
     padding: 30px 30px 30px 30px;
     position: relative;
