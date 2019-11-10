@@ -62,15 +62,6 @@ for (let i = 0; i < pageArray[0].length; i++) {
     li.appendChild(a);
 }
 
-if (page == "index.html") {
-    // console.log(ul);
-    document.querySelector(".stickyDiv").appendChild(ul);
-} else {
-    document.body.insertBefore(ul, document.body.childNodes[0]);
-}
-// document.body.appendChild(ul);
-
-
 // Make classes needed for animation of burger-navigation
 let burgerNav = document.createElement("img");
 burgerNav.src = "./media/iconX.png";
@@ -98,8 +89,15 @@ burgerNav.addEventListener("click", () => {
         }
     }
 });
-document.body.insertBefore(burgerNav, document.body.childNodes[1]);
 
+if (page == "index.html") {
+    // console.log(ul);
+    document.querySelector(".stickyDiv").appendChild(ul);
+} else {
+    document.body.insertBefore(burgerNav, document.body.childNodes[1]);
+    document.body.insertBefore(ul, document.body.childNodes[0]);
+}
+// document.body.appendChild(ul);
 
 // Apply active class to the navigation element of current page
 const all_list_items = document.querySelectorAll("li");

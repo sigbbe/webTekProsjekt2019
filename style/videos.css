@@ -1,8 +1,6 @@
-
-
 .video{
-  margin: auto;
-height: 500px;
+  margin: 40px auto 40px auto;
+  height: 500px;
 }
 
 iframe {
