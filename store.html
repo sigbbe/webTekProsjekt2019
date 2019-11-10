@@ -49,7 +49,29 @@
             justify-content: center;
             vertical-align: middle;
             margin-right:10px;
+            padding: 5px 10px;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+              0 2px 2px rgba(0,0,0,0.11), 
+              0 4px 4px rgba(0,0,0,0.11), 
+              0 6px 8px rgba(0,0,0,0.11),
+              0 8px 16px rgba(0,0,0,0.11);
         }
+
+        .modal-content {
+            background-color: rgb(30, 30, 30);
+            width: 600px;
+            margin: auto;
+            color: white;
+            height: fit-content;
+            min-height: 0;
+            display: flex;
+        }
+
+        .imgContainer {
+            height: auto;
+            width: 50%;
+        }
+
         .songs {
             float:left;
             color: white;
@@ -61,87 +83,133 @@
             color:white;
         }
 
+        h2 {
+            color: #ffffff;
+            text-align: left;
+            position: relative;
+            display: block;
+            font-size: 40px;
+            margin-top: 0px 0px 30px 0px;
+        }
+
+        #albums, #singles {
+            margin-bottom: 100px;
+        }
+
+        h3 {
+            margin-bottom: 0;
+        }
+
+        .eventText p {
+            margin-top: 10px;
+        }
+
+        .modal-content img {
+            width: 50%;
+            margin: 40px 0px 40px 0;
+        }
+
+        .close {
+            z-index: 1;
+        }
+
+        .eventDisc {
+            padding-left: 20px;
+            padding-bottom: 40px;
+        }
+
+        #singles .purchase {
+            margin-top: 0;
+        }
+
+        #singles .eventElement {
+            cursor: default;
+        }
     </style>
 </head>
 <body>
     <div id="content">
         <h1>Store</h1>
         <div id="events">
-            <div class="eventElement">
-                <img alt="small steps" src="media/small-steps.jpg">
-                <div class="eventText">
-                    <h3>Small steps</h3>
-                    <a href="https://music.apple.com/no/album/small-steps/1481070108" target="none"><div class="purchase"> BUY THE ALBUM: $9 </div></a>
-                    <a onclick="message();"><div class="purchase" id="CD"> BUY THE CD</div></a><br>
-            </div>
-            </div>
-            <div class="modal">
-                <div class="modal-content">
-                    <div class="imgContainer">
-                        <span class="close">&times;</span>
-                        <img alt="small steps" src="media/small-steps.jpg">
-                    </div>
-                    <div class="eventDisc">
-                        <h2>Small steps</h2>
-                        <p>Contains the following songs:</p>
-                        <ul class="songs">
-                            <li>The Raven</li>
-                            <li>Homebound</li>
-                            <li>E du Nord</li>
-                            <li>Feel</li>
-                            <li>Hold me tight</li>
-                            <li>Sí Beag, Sí Mór</li>
-                            <li>Amber</li>
-                            <li>a' Fatij</li>
-                            <li>The Most Beautiful Thing</li>
-                        </ul>
+            <div id="albums">
+                <h2>Albums</h2>
+                <div class="eventElement">
+                    <img alt="small steps" src="media/small-steps.jpg">
+                    <div class="eventText">
+                        <h3>Small Steps</h3>
+                        <p>2019</p>
                         <a href="https://music.apple.com/no/album/small-steps/1481070108" target="none"><div class="purchase"> BUY THE ALBUM: $9 </div></a>
-                    <a onclick="message();"><div class="purchase"> BUY THE CD</div></a>
-                    </div>
-                    </div>
+                        <a onclick="message();"><div class="purchase" id="CD"> BUY THE CD</div></a><br>
                 </div>
-            <div class="eventElement">
-                <img alt="small steps" src="media/tmbt.jpg">
-                <div class="eventText">
-                        <h3>The Most Beautiful Thing</h3>
-                        <a href="https://music.apple.com/no/album/the-most-beautiful-thing-single/1476622728" target="none"><div class="purchase"> BUY THE SINGLE: $1 </div></a>
+                </div>
+                <div class="modal">
+                    <div class="modal-content">
+                        <img alt="small steps" src="media/small-steps.jpg">
+                        <span class="close">&times;</span>
+                        <div class="eventDisc">
+                            <h2>Small steps</h2>
+                            <p>Contains the following songs:</p>
+                            <ul class="songs">
+                                <li>The Raven</li>
+                                <li>Homebound</li>
+                                <li>E du Nord</li>
+                                <li>Feel</li>
+                                <li>Hold me tight</li>
+                                <li>Sí Beag, Sí Mór</li>
+                                <li>Amber</li>
+                                <li>a' Fatij</li>
+                                <li>The Most Beautiful Thing</li>
+                            </ul>
+                            <a href="https://music.apple.com/no/album/small-steps/1481070108" target="none"><div class="purchase"> BUY THE ALBUM: $9 </div></a>
+                        <a onclick="message();"><div class="purchase"> BUY THE CD</div></a>
+                        </div>
+                        </div>
                     </div>
             </div>
-            <div class="eventElement">
-                <img alt="small steps" src="media/amber.jpg">
-                <div class="eventText">
-                        <h3>Amber</h3>
-                        <a href="https://music.apple.com/no/album/amber-single/1468073184" target="none"><div class="purchase"> BUY THE SINGLE: $1 </div></a>
-                        Lorem ipsum and shit
-                    </div>
 
+            <div id="singles">
+                <h2>Singles</h2>
+                <div class="eventElement">
+                    <img alt="small steps" src="media/tmbt.jpg">
+                    <div class="eventText">
+                            <h3>The Most Beautiful Thing</h3>
+                            <p>2019</p>
+                            <a href="https://music.apple.com/no/album/the-most-beautiful-thing-single/1476622728" target="none"><div class="purchase"> BUY THE SINGLE: $1 </div></a>
+                        </div>
+                </div>
+                <div class="eventElement">
+                    <img alt="small steps" src="media/amber.jpg">
+                    <div class="eventText">
+                            <h3>Amber</h3>
+                            <p>2019</p>
+                            <a href="https://music.apple.com/no/album/amber-single/1468073184" target="none"><div class="purchase"> BUY THE SINGLE: $1 </div></a>
+                        </div>
+                </div>
             </div>
         </div>
     </div>
     <script type="text/javascript" src="script/navigation.js"></script>
     <script type="text/javascript" src="script/main.js"></script>
     <script>
+
     function message(){
         alert('CDs are currently unavaliable for online sale, but can be found at any of josteins events')
         
     }
+
     var events = document.getElementsByClassName("eventElement");
     var modals = document.getElementsByClassName("modal");
 
-    for (var i = 0; i < events.length; i++) {
-    let event = events[i];
-    let modal = modals[i];
-    let span = modal.childNodes[1].childNodes[1].childNodes[1];
-    console.log(span);
+    var event = events[0];
+    var modal = modals[0];
+    let span = modal.childNodes[1].childNodes[3];
     
-
     event.addEventListener("click", () => {
         modal.style.display = "block";
     });
     
     span.addEventListener("click", () => {
         modal.style.display = "none";
-        console.log(modal.style.display)
     });
 
     window.addEventListener("click", (skrt) => {
@@ -149,7 +217,6 @@
             modal.style.display = "none";
         }
     });
-}
     </script>
 </body>
 </html>

@@ -111,14 +111,14 @@ function initMap() {
     var marker = new google.maps.Marker({ position: woodstock, map: map3 });
 
     //Map4
-    var trondheimSpektrum = { lat: 59.8950803, lng: 10.7741749 };
+    var samf = { lat: 63.422466, lng: 10.394993 };
     var map4 = new google.maps.Map(document.getElementById('map4'), {
-        center: trondheimSpektrum,
-        zoom: 11.9,
+        center: samf,
+        zoom: 13,
         disableDefaultUI: true,
         styles: style
     });
-    var marker = new google.maps.Marker({ position: trondheimSpektrum, map: map4 });
+    var marker = new google.maps.Marker({ position: samf, map: map4 });
 }
 
 var events = document.getElementsByClassName("eventElement");
@@ -128,8 +128,6 @@ for (var i = 0; i < events.length; i++) {
     let event = events[i];
     let modal = modals[i];
     let span = modal.childNodes[3].childNodes[1].childNodes[1];
-    console.log(span);
-    
 
     event.addEventListener("click", () => {
         modal.style.display = "block";
